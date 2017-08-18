@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MapViewConfiguration Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/MapViewConfiguration" class="dashAnchor"></a>
+    <a title="MapViewConfiguration Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MapViewConfiguration Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MapViewConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MapViewConfiguration</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type representing a combination of map vendor and map style to specify a
+mapping implementation for use in map-based views.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OV22HillListsBackupLibrary20MapViewConfiguration6Vendor"></a>
+                    <a name="//apple_ref/swift/Enum/Vendor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary20MapViewConfiguration6Vendor">Vendor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of map vendors.</p>
+
+                        <a href="../Structs/MapViewConfiguration/Vendor.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Vendor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OV22HillListsBackupLibrary20MapViewConfiguration5Style"></a>
+                    <a name="//apple_ref/swift/Enum/Style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary20MapViewConfiguration5Style">Style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of map styles.</p>
+
+                        <a href="../Structs/MapViewConfiguration/Style.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Style</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV22HillListsBackupLibrary20MapViewConfiguration6vendorOS0_6Vendor"></a>
+                    <a name="//apple_ref/swift/Property/vendor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary20MapViewConfiguration6vendorOS0_6Vendor">vendor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This configuration&rsquo;s map vendor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vendor</span><span class="p">:</span> <span class="kt"><a href="../Structs/MapViewConfiguration/Vendor.html">Vendor</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV22HillListsBackupLibrary20MapViewConfiguration5styleOS0_5Style"></a>
+                    <a name="//apple_ref/swift/Property/style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary20MapViewConfiguration5styleOS0_5Style">style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This configuration&rsquo;s map style.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Structs/MapViewConfiguration/Style.html">Style</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary20MapViewConfiguration11appleHybridS0_"></a>
+                    <a name="//apple_ref/swift/Variable/appleHybrid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary20MapViewConfiguration11appleHybridS0_">appleHybrid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map configuration for Apple Hybrid maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">appleHybrid</span> <span class="o">=</span> <span class="kt">MapViewConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">apple</span><span class="p">,</span> <span class="o">.</span><span class="n">hybrid</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary20MapViewConfiguration14appleSatelliteS0_"></a>
+                    <a name="//apple_ref/swift/Variable/appleSatellite" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary20MapViewConfiguration14appleSatelliteS0_">appleSatellite</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map configuration for Apple Satellite maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">appleSatellite</span> <span class="o">=</span> <span class="kt">MapViewConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">apple</span><span class="p">,</span> <span class="o">.</span><span class="n">satellite</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary20MapViewConfiguration13appleStandardS0_"></a>
+                    <a name="//apple_ref/swift/Variable/appleStandard" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary20MapViewConfiguration13appleStandardS0_">appleStandard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map configuration for Apple Standard maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">appleStandard</span> <span class="o">=</span> <span class="kt">MapViewConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">apple</span><span class="p">,</span> <span class="o">.</span><span class="n">standard</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary20MapViewConfiguration12googleHybridS0_"></a>
+                    <a name="//apple_ref/swift/Variable/googleHybrid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary20MapViewConfiguration12googleHybridS0_">googleHybrid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map configuration for Google Hybrid maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">googleHybrid</span> <span class="o">=</span> <span class="kt">MapViewConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">google</span><span class="p">,</span> <span class="o">.</span><span class="n">hybrid</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary20MapViewConfiguration14googleStandardS0_"></a>
+                    <a name="//apple_ref/swift/Variable/googleStandard" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary20MapViewConfiguration14googleStandardS0_">googleStandard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map configuration for Google Standard maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">googleStandard</span> <span class="o">=</span> <span class="kt">MapViewConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">google</span><span class="p">,</span> <span class="o">.</span><span class="n">standard</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary20MapViewConfiguration13googleTerrainS0_"></a>
+                    <a name="//apple_ref/swift/Variable/googleTerrain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary20MapViewConfiguration13googleTerrainS0_">googleTerrain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map configuration for Google Terrain maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">googleTerrain</span> <span class="o">=</span> <span class="kt">MapViewConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">google</span><span class="p">,</span> <span class="o">.</span><span class="n">terrain</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HillList Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/HillList" class="dashAnchor"></a>
+    <a title="HillList Enum Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HillList Enum Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HillList</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HillList</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                </div>
+              </div>
+            <p>An enumeration of all hill lists that can be tracked by the Hill Lists app.</p>
+
+<p>The app groups lists by country/territory (loosely, by &lsquo;region&rsquo;) within
+Britain and Ireland and uses a flag image and name in its UI to indicate the
+region and hill category respectively. Each case of this enumeration
+therefore represents a named category of hills (<em>e.g. Marilyns</em>) within a
+geographical region (<em>e.g. England</em>). Some lists apply to only one region
+(<em>e.g. Munros</em> are found only in <em>Scotland</em>) and the corresponding case
+contains no region element in its name.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The raw values of this enumeration are the identifiers assigned by
+    the app and are therefore an implementation detail.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    this enum smells&hellip; Should it really be this
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList8corbettsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/corbetts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList8corbettsFMS0_S0_">corbetts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8corbettsFMS1_S1_">HillList.Category.corbetts</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">corbetts</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList11corbettTopsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/corbettTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList11corbettTopsFMS0_S0_">corbettTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category11corbettTopsFMS1_S1_">HillList.Category.corbettTops</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">corbettTops</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList7donaldsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/donalds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList7donaldsFMS0_S0_">donalds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7donaldsFMS1_S1_">HillList.Category.donalds</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">donalds</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList10donaldTopsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/donaldTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList10donaldTopsFMS0_S0_">donaldTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category10donaldTopsFMS1_S1_">HillList.Category.donaldTops</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">donaldTops</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList7grahamsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/grahams" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList7grahamsFMS0_S0_">grahams</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7grahamsFMS1_S1_">HillList.Category.grahams</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">grahams</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13scottishHumpsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/scottishHumps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13scottishHumpsFMS0_S0_">scottishHumps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_">HillList.Category.humps</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">scottishHumps</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList16scottishMarilynsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/scottishMarilyns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList16scottishMarilynsFMS0_S0_">scottishMarilyns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_">HillList.Category.marilyns</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">scottishMarilyns</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList6munrosFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/munros" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList6munrosFMS0_S0_">munros</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6munrosFMS1_S1_">HillList.Category.munros</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">munros</span> <span class="o">=</span> <span class="mi">8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList9munroTopsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/munroTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList9munroTopsFMS0_S0_">munroTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category9munroTopsFMS1_S1_">HillList.Category.munroTops</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">munroTops</span> <span class="o">=</span> <span class="mi">9</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList6murdosFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/murdos" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList6murdosFMS0_S0_">murdos</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6murdosFMS1_S1_">HillList.Category.murdos</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">murdos</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList10newDonaldsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/newDonalds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList10newDonaldsFMS0_S0_">newDonalds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category10newDonaldsFMS1_S1_">HillList.Category.newDonalds</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">newDonalds</span> <span class="o">=</span> <span class="mi">11</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList14isleOfManHumpsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isleOfManHumps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList14isleOfManHumpsFMS0_S0_">isleOfManHumps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_">HillList.Category.humps</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region9isleOfManFMS1_S1_">HillList.Region.isleOfMan</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">isleOfManHumps</span> <span class="o">=</span> <span class="mi">13</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList17isleOfManMarilynsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isleOfManMarilyns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList17isleOfManMarilynsFMS0_S0_">isleOfManMarilyns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_">HillList.Category.marilyns</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region9isleOfManFMS1_S1_">HillList.Region.isleOfMan</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">isleOfManMarilyns</span> <span class="o">=</span> <span class="mi">14</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList11welshFurthsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/welshFurths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList11welshFurthsFMS0_S0_">welshFurths</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6furthsFMS1_S1_">HillList.Category.furths</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region5walesFMS1_S1_">HillList.Region.wales</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">welshFurths</span> <span class="o">=</span> <span class="mi">15</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList10welshHumpsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/welshHumps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList10welshHumpsFMS0_S0_">welshHumps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_">HillList.Category.humps</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region5walesFMS1_S1_">HillList.Region.wales</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">welshHumps</span> <span class="o">=</span> <span class="mi">18</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13welshMarilynsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/welshMarilyns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13welshMarilynsFMS0_S0_">welshMarilyns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_">HillList.Category.marilyns</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region5walesFMS1_S1_">HillList.Region.wales</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">welshMarilyns</span> <span class="o">=</span> <span class="mi">19</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList8birkettsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/birketts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList8birkettsFMS0_S0_">birketts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8birkettsFMS1_S1_">HillList.Category.birketts</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">birketts</span> <span class="o">=</span> <span class="mi">21</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList12englishHumpsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/englishHumps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList12englishHumpsFMS0_S0_">englishHumps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_">HillList.Category.humps</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">englishHumps</span> <span class="o">=</span> <span class="mi">23</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList15englishMarilynsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/englishMarilyns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList15englishMarilynsFMS0_S0_">englishMarilyns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_">HillList.Category.marilyns</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">englishMarilyns</span> <span class="o">=</span> <span class="mi">25</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13outlyingFellsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/outlyingFells" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13outlyingFellsFMS0_S0_">outlyingFells</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category13outlyingFellsFMS1_S1_">HillList.Category.outlyingFells</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">outlyingFells</span> <span class="o">=</span> <span class="mi">27</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList11wainwrightsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/wainwrights" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList11wainwrightsFMS0_S0_">wainwrights</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category11wainwrightsFMS1_S1_">HillList.Category.wainwrights</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">wainwrights</span> <span class="o">=</span> <span class="mi">28</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList19ukCountyTopsCurrentFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/ukCountyTopsCurrent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList19ukCountyTopsCurrentFMS0_S0_">ukCountyTopsCurrent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category17countyTopsCurrentFMS1_S1_">HillList.Category.countyTopsCurrent</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">ukCountyTopsCurrent</span> <span class="o">=</span> <span class="mi">29</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList8ukDeweysFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/ukDeweys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList8ukDeweysFMS0_S0_">ukDeweys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6deweysFMS1_S1_">HillList.Category.deweys</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">ukDeweys</span> <span class="o">=</span> <span class="mi">30</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList9ukHewittsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/ukHewitts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList9ukHewittsFMS0_S0_">ukHewitts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7hewittsFMS1_S1_">HillList.Category.hewitts</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">ukHewitts</span> <span class="o">=</span> <span class="mi">31</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList8nuttallsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/nuttalls" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList8nuttallsFMS0_S0_">nuttalls</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8nuttallsFMS1_S1_">HillList.Category.nuttalls</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nuttalls</span> <span class="o">=</span> <span class="mi">34</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList9trail100sFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/trail100s" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList9trail100sFMS0_S0_">trail100s</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category9trail100sFMS1_S1_">HillList.Category.trail100s</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">trail100s</span> <span class="o">=</span> <span class="mi">35</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList5carnsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/carns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList5carnsFMS0_S0_">carns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5carnsFMS1_S1_">HillList.Category.carns</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">carns</span> <span class="o">=</span> <span class="mi">37</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList12nineHundredsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/nineHundreds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList12nineHundredsFMS0_S0_">nineHundreds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category12nineHundredsFMS1_S1_">HillList.Category.nineHundreds</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7irelandFMS1_S1_">HillList.Region.ireland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nineHundreds</span> <span class="o">=</span> <span class="mi">38</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList8arderinsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/arderins" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList8arderinsFMS0_S0_">arderins</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8arderinsFMS1_S1_">HillList.Category.arderins</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">arderins</span> <span class="o">=</span> <span class="mi">39</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList8binnionsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/binnions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList8binnionsFMS0_S0_">binnions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8binnionsFMS1_S1_">HillList.Category.binnions</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">binnions</span> <span class="o">=</span> <span class="mi">40</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList15vandeleurLynamsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/vandeleurLynams" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList15vandeleurLynamsFMS0_S0_">vandeleurLynams</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category15vandeleurLynamsFMS1_S1_">HillList.Category.vandeleurLynams</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">vandeleurLynams</span> <span class="o">=</span> <span class="mi">41</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList30northernIrishCountyTopsCurrentFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/northernIrishCountyTopsCurrent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList30northernIrishCountyTopsCurrentFMS0_S0_">northernIrishCountyTopsCurrent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category17countyTopsCurrentFMS1_S1_">HillList.Category.countyTopsCurrent</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">northernIrishCountyTopsCurrent</span> <span class="o">=</span> <span class="mi">46</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList12donaldDeweysFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/donaldDeweys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList12donaldDeweysFMS0_S0_">donaldDeweys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category12donaldDeweysFMS1_S1_">HillList.Category.donaldDeweys</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">donaldDeweys</span> <span class="o">=</span> <span class="mi">47</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13englishFurthsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/englishFurths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13englishFurthsFMS0_S0_">englishFurths</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6furthsFMS1_S1_">HillList.Category.furths</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">englishFurths</span> <span class="o">=</span> <span class="mi">48</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList10grahamTopsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/grahamTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList10grahamTopsFMS0_S0_">grahamTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category10grahamTopsFMS1_S1_">HillList.Category.grahamTops</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">grahamTops</span> <span class="o">=</span> <span class="mi">49</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList20northernIrishHewittsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/northernIrishHewitts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList20northernIrishHewittsFMS0_S0_">northernIrishHewitts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7hewittsFMS1_S1_">HillList.Category.hewitts</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">northernIrishHewitts</span> <span class="o">=</span> <span class="mi">50</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13highlandFivesFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/highlandFives" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13highlandFivesFMS0_S0_">highlandFives</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category13highlandFivesFMS1_S1_">HillList.Category.highlandFives</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">highlandFives</span> <span class="o">=</span> <span class="mi">51</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList18northernIrishHumpsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/northernIrishHumps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList18northernIrishHumpsFMS0_S0_">northernIrishHumps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_">HillList.Category.humps</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">northernIrishHumps</span> <span class="o">=</span> <span class="mi">52</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList21northernIrishMarilynsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/northernIrishMarilyns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList21northernIrishMarilynsFMS0_S0_">northernIrishMarilyns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_">HillList.Category.marilyns</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">northernIrishMarilyns</span> <span class="o">=</span> <span class="mi">53</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13myrddynDeweysFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/myrddynDeweys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13myrddynDeweysFMS0_S0_">myrddynDeweys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category13myrddynDeweysFMS1_S1_">HillList.Category.myrddynDeweys</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">myrddynDeweys</span> <span class="o">=</span> <span class="mi">54</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList13scottishSimmsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/scottishSimms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList13scottishSimmsFMS0_S0_">scottishSimms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_">HillList.Category.simms</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region8scotlandFMS1_S1_">HillList.Region.scotland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">scottishSimms</span> <span class="o">=</span> <span class="mi">55</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList14isleOfManSimmsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isleOfManSimms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList14isleOfManSimmsFMS0_S0_">isleOfManSimms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_">HillList.Category.simms</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region9isleOfManFMS1_S1_">HillList.Region.isleOfMan</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">isleOfManSimms</span> <span class="o">=</span> <span class="mi">56</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList10welshSimmsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/welshSimms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList10welshSimmsFMS0_S0_">welshSimms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_">HillList.Category.simms</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region5walesFMS1_S1_">HillList.Region.wales</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">welshSimms</span> <span class="o">=</span> <span class="mi">57</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList11fellrangersFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/fellrangers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList11fellrangersFMS0_S0_">fellrangers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category11fellrangersFMS1_S1_">HillList.Category.fellrangers</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">fellrangers</span> <span class="o">=</span> <span class="mi">58</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList12englishSimmsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/englishSimms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList12englishSimmsFMS0_S0_">englishSimms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_">HillList.Category.simms</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">englishSimms</span> <span class="o">=</span> <span class="mi">59</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList6syngesFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/synges" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList6syngesFMS0_S0_">synges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6syngesFMS1_S1_">HillList.Category.synges</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">synges</span> <span class="o">=</span> <span class="mi">60</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList18northernIrishSimmsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/northernIrishSimms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList18northernIrishSimmsFMS0_S0_">northernIrishSimms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_">HillList.Category.simms</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">northernIrishSimms</span> <span class="o">=</span> <span class="mi">61</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList14londonBoroughsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/londonBoroughs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList14londonBoroughsFMS0_S0_">londonBoroughs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category14londonBoroughsFMS1_S1_">HillList.Category.londonBoroughs</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region7englandFMS1_S1_">HillList.Region.england</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">londonBoroughs</span> <span class="o">=</span> <span class="mi">62</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList7dillonsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/dillons" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList7dillonsFMS0_S0_">dillons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7dillonsFMS1_S1_">HillList.Category.dillons</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">dillons</span> <span class="o">=</span> <span class="mi">63</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList7bridgesFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/bridges" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList7bridgesFMS0_S0_">bridges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7bridgesFMS1_S1_">HillList.Category.bridges</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bridges</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList14buxtonAndLewisFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/buxtonAndLewis" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList14buxtonAndLewisFMS0_S0_">buxtonAndLewis</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category14buxtonAndLewisFMS1_S1_">HillList.Category.buxtonAndLewis</a></code> and region
+<code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">buxtonAndLewis</span> <span class="o">=</span> <span class="mi">65</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList22ukCountyTopsHistoricalFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/ukCountyTopsHistorical" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList22ukCountyTopsHistoricalFMS0_S0_">ukCountyTopsHistorical</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category20countyTopsHistoricalFMS1_S1_">HillList.Category.countyTopsHistorical</a></code> and
+region <code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">ukCountyTopsHistorical</span> <span class="o">=</span> <span class="mi">66</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList33northernIrishCountyTopsHistoricalFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/northernIrishCountyTopsHistorical" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList33northernIrishCountyTopsHistoricalFMS0_S0_">northernIrishCountyTopsHistorical</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category20countyTopsHistoricalFMS1_S1_">HillList.Category.countyTopsHistorical</a></code> and
+region <code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region15northernIrelandFMS1_S1_">HillList.Region.northernIreland</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">northernIrishCountyTopsHistorical</span> <span class="o">=</span> <span class="mi">67</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary8HillList24countyTopsAdministrativeFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/countyTopsAdministrative" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary8HillList24countyTopsAdministrativeFMS0_S0_">countyTopsAdministrative</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hill list with category <code><a href="../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category24countyTopsAdministrativeFMS1_S1_">HillList.Category.countyTopsAdministrative</a></code> and
+region <code><a href="../Enums/HillList/Region.html#/s:FOO22HillListsBackupLibrary8HillList6Region13unitedKingdomFMS1_S1_">HillList.Region.unitedKingdom</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">countyTopsAdministrative</span> <span class="o">=</span> <span class="mi">68</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OO22HillListsBackupLibrary8HillList8Category"></a>
+                    <a name="//apple_ref/swift/Enum/Category" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OO22HillListsBackupLibrary8HillList8Category">Category</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of hill list categories without any geographical
+consideration.</p>
+
+<p>The descriptions of the case values are taken from the
+<a href="http://www.hills-database.co.uk/database_notes.html">database notes</a>
+of the Database of British and Irish Hills.</p>
+
+                        <a href="../Enums/HillList/Category.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OO22HillListsBackupLibrary8HillList6Region"></a>
+                    <a name="//apple_ref/swift/Enum/Region" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OO22HillListsBackupLibrary8HillList6Region">Region</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of geographical regions within Britain and Ireland to which
+hill lists can belong.</p>
+
+                        <a href="../Enums/HillList/Region.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Region</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vO22HillListsBackupLibrary8HillList2idSi"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vO22HillListsBackupLibrary8HillList2idSi">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the identifier used by the app for this hill list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vO22HillListsBackupLibrary8HillList8categoryOS0_8Category"></a>
+                    <a name="//apple_ref/swift/Property/category" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vO22HillListsBackupLibrary8HillList8categoryOS0_8Category">category</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the category of this hill list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Enums/HillList/Category.html">Category</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vO22HillListsBackupLibrary8HillList6regionOS0_6Region"></a>
+                    <a name="//apple_ref/swift/Property/region" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vO22HillListsBackupLibrary8HillList6regionOS0_6Region">region</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the geographical region of this hill list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">region</span><span class="p">:</span> <span class="kt"><a href="../Enums/HillList/Region.html">Region</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

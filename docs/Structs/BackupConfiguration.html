@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BackupConfiguration Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/BackupConfiguration" class="dashAnchor"></a>
+    <a title="BackupConfiguration Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BackupConfiguration Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BackupConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BackupConfiguration</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type representing a combination of backup mode and backup destination to
+specify how backups are created and where they should be stored.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OV22HillListsBackupLibrary19BackupConfiguration4Mode"></a>
+                    <a name="//apple_ref/swift/Enum/Mode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary19BackupConfiguration4Mode">Mode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of the ways in which backups can be made.</p>
+
+                        <a href="../Structs/BackupConfiguration/Mode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Mode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OV22HillListsBackupLibrary19BackupConfiguration11Destination"></a>
+                    <a name="//apple_ref/swift/Enum/Destination" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary19BackupConfiguration11Destination">Destination</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of destinations for backup files.</p>
+
+                        <a href="../Structs/BackupConfiguration/Destination.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Destination</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV22HillListsBackupLibrary19BackupConfiguration4modeOS0_4Mode"></a>
+                    <a name="//apple_ref/swift/Property/mode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary19BackupConfiguration4modeOS0_4Mode">mode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This configuration&rsquo;s backup mode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Structs/BackupConfiguration/Mode.html">Mode</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV22HillListsBackupLibrary19BackupConfiguration11destinationOS0_11Destination"></a>
+                    <a name="//apple_ref/swift/Property/destination" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary19BackupConfiguration11destinationOS0_11Destination">destination</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This configuration&rsquo;s backup destination.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Structs/BackupConfiguration/Destination.html">Destination</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary19BackupConfiguration15automaticIcloudS0_"></a>
+                    <a name="//apple_ref/swift/Variable/automaticIcloud" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary19BackupConfiguration15automaticIcloudS0_">automaticIcloud</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A backup configuration for automatically backing up to iCloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">automaticIcloud</span> <span class="o">=</span> <span class="kt">BackupConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">automatic</span><span class="p">,</span> <span class="o">.</span><span class="n">icloud</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary19BackupConfiguration12manualDeviceS0_"></a>
+                    <a name="//apple_ref/swift/Variable/manualDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary19BackupConfiguration12manualDeviceS0_">manualDevice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A backup configuration for manually backing up to the user&rsquo;s device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">manualDevice</span> <span class="o">=</span> <span class="kt">BackupConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">manual</span><span class="p">,</span> <span class="o">.</span><span class="n">device</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary19BackupConfiguration13manualDropboxS0_"></a>
+                    <a name="//apple_ref/swift/Variable/manualDropbox" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary19BackupConfiguration13manualDropboxS0_">manualDropbox</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A backup configuration for manually backing up to Dropbox.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">manualDropbox</span> <span class="o">=</span> <span class="kt">BackupConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">manual</span><span class="p">,</span> <span class="o">.</span><span class="n">dropbox</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary19BackupConfiguration12manualIcloudS0_"></a>
+                    <a name="//apple_ref/swift/Variable/manualIcloud" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary19BackupConfiguration12manualIcloudS0_">manualIcloud</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A backup configuration for manually backing up to iCloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">manualIcloud</span> <span class="o">=</span> <span class="kt">BackupConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">manual</span><span class="p">,</span> <span class="o">.</span><span class="n">icloud</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvV22HillListsBackupLibrary19BackupConfiguration19manualIndeterminateS0_"></a>
+                    <a name="//apple_ref/swift/Variable/manualIndeterminate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvV22HillListsBackupLibrary19BackupConfiguration19manualIndeterminateS0_">manualIndeterminate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A manual backup configuration with an indeterminate destination.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">manualIndeterminate</span> <span class="o">=</span> <span class="kt">BackupConfiguration</span><span class="p">(</span><span class="o">.</span><span class="n">manual</span><span class="p">,</span> <span class="o">.</span><span class="n">indeterminate</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

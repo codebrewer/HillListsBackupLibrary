@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BackupImporter Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/BackupImporter" class="dashAnchor"></a>
+    <a title="BackupImporter Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BackupImporter Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BackupImporter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BackupImporter</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type that can generate <code><a href="../Protocols/Backup.html">Backup</a></code> instances by importing backups created by
+the Hill Lists app.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFV22HillListsBackupLibrary14BackupImporter12importBackupFzT4pathSS_PS_6Backup_"></a>
+                    <a name="//apple_ref/swift/Method/importBackup(path:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV22HillListsBackupLibrary14BackupImporter12importBackupFzT4pathSS_PS_6Backup_">importBackup(path:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Protocols/Backup.html">Backup</a></code> instance from data in a file.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/BackupError.html#/s:FO22HillListsBackupLibrary11BackupError10openFailedFMS0_S0_">BackupError.openFailed</a></code>, <code><a href="../Enums/BackupError.html#/s:FO22HillListsBackupLibrary11BackupError20initializationFailedFMS0_S0_">BackupError.initializationFailed</a></code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">importBackup</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Backup.html">Backup</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the path to a Hill Lists backup file.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFV22HillListsBackupLibrary14BackupImporter12importBackupFzT3urlV10Foundation3URL_PS_6Backup_"></a>
+                    <a name="//apple_ref/swift/Method/importBackup(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV22HillListsBackupLibrary14BackupImporter12importBackupFzT3urlV10Foundation3URL_PS_6Backup_">importBackup(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Protocols/Backup.html">Backup</a></code> instance from data identified by a <code>URL</code>.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/BackupError.html#/s:FO22HillListsBackupLibrary11BackupError10openFailedFMS0_S0_">BackupError.openFailed</a></code>, <code><a href="../Enums/BackupError.html#/s:FO22HillListsBackupLibrary11BackupError20initializationFailedFMS0_S0_">BackupError.initializationFailed</a></code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">importBackup</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Backup.html">Backup</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the URL of a Hill Lists backup data source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFV22HillListsBackupLibrary14BackupImporter12importBackupFzT10dictionaryGVs10DictionarySSP___PS_6Backup_"></a>
+                    <a name="//apple_ref/swift/Method/importBackup(dictionary:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV22HillListsBackupLibrary14BackupImporter12importBackupFzT10dictionaryGVs10DictionarySSP___PS_6Backup_">importBackup(dictionary:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Protocols/Backup.html">Backup</a></code> instance from data in a <code>Dictionary</code>, which may be
+convenient for processing &lsquo;backups&rsquo; created other than by the Hill Lists
+app.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/BackupError.html#/s:FO22HillListsBackupLibrary11BackupError10openFailedFMS0_S0_">BackupError.openFailed</a></code>, <code><a href="../Enums/BackupError.html#/s:FO22HillListsBackupLibrary11BackupError20initializationFailedFMS0_S0_">BackupError.initializationFailed</a></code>.
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html">BackupKey</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">importBackup</span><span class="p">(</span><span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Backup.html">Backup</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a dictionary containing the keys and appropriate values for a Hill Lists backup.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

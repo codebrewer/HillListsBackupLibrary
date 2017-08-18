@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Category Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/Category" class="dashAnchor"></a>
+    <a title="Category Enum Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        Category Enum Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/HillList/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Category</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                </div>
+              </div>
+            <p>An enumeration of hill list categories without any geographical
+consideration.</p>
+
+<p>The descriptions of the case values are taken from the
+<a href="http://www.hills-database.co.uk/database_notes.html">database notes</a>
+of the Database of British and Irish Hills.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category8arderinsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/arderins" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category8arderinsFMS1_S1_">arderins</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland at least 500m in height with a drop of at least 30m on
+all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">arderins</span> <span class="o">=</span> <span class="s">"A"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category8binnionsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/binnions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category8binnionsFMS1_S1_">binnions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland below 400m in height with a drop of at least 100m on
+all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">binnions</span> <span class="o">=</span> <span class="s">"Bin"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category8birkettsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/birketts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category8birkettsFMS1_S1_">birketts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Lake District over 1000ft in height listed in Bill Birkett&rsquo;s
+<a href="https://www.ldwa.org.uk/ldp/members/show_publication.php?menu_type=S&publication_id=8284">Complete Lakeland Fells</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">birketts</span> <span class="o">=</span> <span class="s">"B"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category7bridgesFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/bridges" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category7bridgesFMS1_S1_">bridges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list published by Bridge in 1973.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bridges</span> <span class="o">=</span> <span class="s">"Bg"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category14buxtonAndLewisFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/buxtonAndLewis" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category14buxtonAndLewisFMS1_S1_">buxtonAndLewis</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list published by Buxton and Lewis in 1986.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">buxtonAndLewis</span> <span class="o">=</span> <span class="s">"BL"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category5carnsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/carns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category5carnsFMS1_S1_">carns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland between 400 and 499.9m in height with a drop of at
+least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">carns</span> <span class="o">=</span> <span class="s">"Ca"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category8corbettsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/corbetts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category8corbettsFMS1_S1_">corbetts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Scotland between 2500 and 2999ft in height with a drop of at
+least 500ft on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">corbetts</span> <span class="o">=</span> <span class="s">"C"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category11corbettTopsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/corbettTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category11corbettTopsFMS1_S1_">corbettTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Scotland between 2500 and 2999ft in height with a drop of at
+least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">corbettTops</span> <span class="o">=</span> <span class="s">"CT"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category24countyTopsAdministrativeFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/countyTopsAdministrative" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category24countyTopsAdministrativeFMS1_S1_">countyTopsAdministrative</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The highest point within (or sometimes on) a boundary of each county as
+it existed from the mid 1970s until some time in the 1990s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">countyTopsAdministrative</span> <span class="o">=</span> <span class="s">"CoA"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category17countyTopsCurrentFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/countyTopsCurrent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category17countyTopsCurrentFMS1_S1_">countyTopsCurrent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The highest point within (or sometimes on) a boundary of each county as
+it has existed from some time in the 1990s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">countyTopsCurrent</span> <span class="o">=</span> <span class="s">"CoU"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category20countyTopsHistoricalFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/countyTopsHistorical" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category20countyTopsHistoricalFMS1_S1_">countyTopsHistorical</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The highest point within (or sometimes on) a boundary of each county as
+it existed until the mid 1970s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">countyTopsHistorical</span> <span class="o">=</span> <span class="s">"CoH"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category6deweysFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/deweys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category6deweysFMS1_S1_">deweys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in England, Wales and the Isle of Man at least 500m in height and
+below 609.6m in height with a drop of at least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">deweys</span> <span class="o">=</span> <span class="s">"5"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category7dillonsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/dillons" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category7dillonsFMS1_S1_">dillons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland at least 2000ft in height published in
+<a href="http://www.paddydillon.co.uk/guidebook/the-mountains-of-ireland/">The Mountains of Ireland</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">dillons</span> <span class="o">=</span> <span class="s">"Dil"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category12donaldDeweysFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/donaldDeweys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category12donaldDeweysFMS1_S1_">donaldDeweys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Scottish Lowlands at least 500m in height and below 609.6m
+in height with a drop of at least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">donaldDeweys</span> <span class="o">=</span> <span class="s">"5D"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category7donaldsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/donalds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category7donaldsFMS1_S1_">donalds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Scottish Lowlands at least 2000ft in height.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">donalds</span> <span class="o">=</span> <span class="s">"D"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category10donaldTopsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/donaldTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category10donaldTopsFMS1_S1_">donaldTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Scottish Lowlands at least 2000ft in height but that
+(somehow&hellip;) aren&rsquo;t Donalds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">donaldTops</span> <span class="o">=</span> <span class="s">"DT"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category11fellrangersFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/fellrangers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category11fellrangersFMS1_S1_">fellrangers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Lake District that are included in the
+<a href="http://www.cicerone.co.uk/product/index.cfm/cid/77/catalogue/fellranger">Lakeland Fellranger</a>
+guides by Mark Richards.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">fellrangers</span> <span class="o">=</span> <span class="s">"Fel"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category6furthsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/furths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category6furthsFMS1_S1_">furths</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Munro equivalents in England, Wales and Ireland.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6munrosFMS1_S1_">HillList.Category.munros</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">furths</span> <span class="o">=</span> <span class="s">"F"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category7grahamsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/grahams" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category7grahamsFMS1_S1_">grahams</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Scotland between 2000 and 2499 feet in height with a drop of at
+least 150m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">grahams</span> <span class="o">=</span> <span class="s">"G"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category10grahamTopsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/grahamTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category10grahamTopsFMS1_S1_">grahamTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scottish hills between 2000 and 2499 feet in height with a drop of at
+least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">grahamTops</span> <span class="o">=</span> <span class="s">"GT"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category7hewittsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/hewitts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category7hewittsFMS1_S1_">hewitts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in England, Wales and Ireland at least 2000ft in height with a
+drop of at least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">hewitts</span> <span class="o">=</span> <span class="s">"Hew"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category13highlandFivesFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/highlandFives" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category13highlandFivesFMS1_S1_">highlandFives</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Scottish Highlands at least 500m in height and below 609.6m
+in height with a drop of at least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">highlandFives</span> <span class="o">=</span> <span class="s">"5H"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/humps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category5humpsFMS1_S1_">humps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills of any height with a drop of 100m or more on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">humps</span> <span class="o">=</span> <span class="s">"Hu"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category14londonBoroughsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/londonBoroughs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category14londonBoroughsFMS1_S1_">londonBoroughs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The highest point within the boundary of each London borough as it has
+existed from some time in the 1990s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">londonBoroughs</span> <span class="o">=</span> <span class="s">"CoL"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/marilyns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category8marilynsFMS1_S1_">marilyns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills of any height with a drop of 150m or more on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">marilyns</span> <span class="o">=</span> <span class="s">"Ma"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category6munrosFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/munros" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category6munrosFMS1_S1_">munros</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Scotland over 3000ft in height.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">munros</span> <span class="o">=</span> <span class="s">"M"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category9munroTopsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/munroTops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category9munroTopsFMS1_S1_">munroTops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Subsidiary summits of Munros that meet the Munro height criterion.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category6munrosFMS1_S1_">HillList.Category.munros</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">munroTops</span> <span class="o">=</span> <span class="s">"MT"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category6murdosFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/murdos" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category6murdosFMS1_S1_">murdos</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Scotland at least 3000ft in height with a drop of at least 30m
+on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">murdos</span> <span class="o">=</span> <span class="s">"Mur"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category13myrddynDeweysFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/myrddynDeweys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category13myrddynDeweysFMS1_S1_">myrddynDeweys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland at least 500m in height and below 609.6m in height with
+a drop of at least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">myrddynDeweys</span> <span class="o">=</span> <span class="s">"5M"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category10newDonaldsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/newDonalds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category10newDonaldsFMS1_S1_">newDonalds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A reclassification of Donalds with a simplified drop criterion of 30m.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../../Enums/HillList/Category.html#/s:FOO22HillListsBackupLibrary8HillList8Category7donaldsFMS1_S1_">HillList.Category.donalds</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">newDonalds</span> <span class="o">=</span> <span class="s">"DN"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category12nineHundredsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/nineHundreds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category12nineHundredsFMS1_S1_">nineHundreds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland over 900m in height and with a prominence of at least
+15m.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nineHundreds</span> <span class="o">=</span> <span class="s">"900s"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category8nuttallsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/nuttalls" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category8nuttallsFMS1_S1_">nuttalls</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in England and Wales at least 2000ft in height with a drop of at
+least 15m on all sides, as published in
+<a href="http://www.nuttalls.com/general/books.htm">The Mountains of England and Wales</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nuttalls</span> <span class="o">=</span> <span class="s">"N"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category13outlyingFellsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/outlyingFells" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category13outlyingFellsFMS1_S1_">outlyingFells</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills listed in Wainwright&rsquo;s <em>The Outlying Fells of Lakeland</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">outlyingFells</span> <span class="o">=</span> <span class="s">"WO"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/simms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category5simmsFMS1_S1_">simms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Britain and Ireland at least 600m in height with a drop of at
+least 30m on all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">simms</span> <span class="o">=</span> <span class="s">"Sim"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category6syngesFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/synges" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category6syngesFMS1_S1_">synges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in the Lake District over 1000ft listed in <em>The Lakeland Summits</em>,
+published in 1995 by Tim Synges.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">synges</span> <span class="o">=</span> <span class="s">"Sy"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category9trail100sFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/trail100s" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category9trail100sFMS1_S1_">trail100s</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of <a href="http://www.livefortheoutdoors.com/trail100">100 hills</a>
+published in <em>Trail</em> magazine in 2007.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">trail100s</span> <span class="o">=</span> <span class="s">"T100"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category15vandeleurLynamsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/vandeleurLynams" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category15vandeleurLynamsFMS1_S1_">vandeleurLynams</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hills in Ireland at least 600m in height with a drop of at least 15m on
+all sides.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">vandeleurLynams</span> <span class="o">=</span> <span class="s">"VL"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FOO22HillListsBackupLibrary8HillList8Category11wainwrightsFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/wainwrights" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOO22HillListsBackupLibrary8HillList8Category11wainwrightsFMS1_S1_">wainwrights</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The 214 hills listed in volumes 1-7 of Wainwright&rsquo;s <em>A Pictorial Guide
+to the Lakeland Fells</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">wainwrights</span> <span class="o">=</span> <span class="s">"W"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
