@@ -23,7 +23,7 @@ name, location and height.
 The library is motivated by a desire to learn the Swift programming language and
 how to build a reusable Swift library the "right" way. A concrete project is
 often the best way to learn new skills. If the resulting library is useful to
-anyone then that's a bonus.
+anyone then that's a bonus!
 
 ## Requirements
 
@@ -31,6 +31,9 @@ The minimum SDK/platform versions required to build and use the library are:
  
 * Swift 3.1
 * macOS 10.12
+
+The library should also be usable on iOS (probably version 10 onwards) but this
+has not been tested.
 
 Unfortunately, Linux is not supported because some APIs used by the library
 (*e.g.* `CoreLocation`) are not presently available on Linux.
@@ -138,9 +141,9 @@ probably the tracked lists and hill ascents that are of most interest:
 
 ```swift
 backup.trackedLists.forEach { hillList in
-  // hillList is an instance of `HillList`, a type that describes the category
-  // and geographical region of a list of hills
-  print("Tracking \(hillList.category) in \(hillList.region)")
+  // hillList is an instance of `HillList`, a type that describes the
+  // classification and geographical regions of a list of hills
+  print("Tracking \(hillList.classification) in \(hillList.regions)")
 }
 
 backup.ascendedHills.forEach { ascendedHill in

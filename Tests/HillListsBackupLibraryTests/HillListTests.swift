@@ -19,526 +19,587 @@
 @testable import HillListsBackupLibrary
 import XCTest
 
-/// Tests of the `HillLists` type.
+/// Tests of the `HillList` type.
 class HillListTests: XCTestCase {
+  /// Tests conformance to the `Equatable` protocol (but not exhaustively...).
+  func testHillListEquatable() {
+    XCTAssertEqual(HillList.getHillList(id: 1), HillList.getHillList(id: 1))
+    XCTAssertEqual(HillList.getHillList(id: 29), HillList.getHillList(id: 29))
+    XCTAssertNotEqual(HillList.getHillList(id: 1), HillList.getHillList(id: 29))
+  }
+
   func testInvalidListId() {
-    XCTAssertNil(HillList(id: 0))
+    XCTAssertNil(HillList.getHillList(id: 0))
   }
 
   // The following are in the order in which the lists are presented for
   // tracking selection in version 5.2 of the app.
 
   //
-  // Scotland
+  // Lists with the Scotland flag
   //
 
-  func testCorbettTopsList() {
+  func testCorbettTopList() {
     let id = 2
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.corbettTops)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.corbettTop)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testCorbettsList() {
+  func testCorbettList() {
     let id = 1
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.corbetts)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.corbett)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testDonaldDeweysList() {
+  func testDonaldDeweyList() {
     let id = 47
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.donaldDeweys)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.donaldDewey)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testDonaldTopsList() {
+  func testDonaldTopList() {
     let id = 4
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.donaldTops)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.donaldTop)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testDonaldsList() {
+  func testDonaldList() {
     let id = 3
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.donalds)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.donald)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testGrahamTopsList() {
+  func testGrahamTopList() {
     let id = 49
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.grahamTops)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.grahamTop)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testGrahamsList() {
+  func testGrahamList() {
     let id = 5
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.grahams)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.graham)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testHighlandFivesList() {
+  func testHighlandFiveList() {
     let id = 51
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.highlandFives)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.highlandFive)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testScottishHumpsList() {
+  func testScottishHumpList() {
     let id = 6
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.humps)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hump)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testScottishMarilynsList() {
+  func testScottishMarilynList() {
     let id = 7
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.marilyns)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.marilyn)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testMunroTopsList() {
+  func testMunroTopList() {
     let id = 9
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.munroTops)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.munroTop)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testMunrosList() {
+  func testMunroList() {
     let id = 8
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.munros)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.munro)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testMurdosList() {
+  func testMurdoList() {
     let id = 10
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.murdos)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.murdo)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testNewDonaldsList() {
+  func testNewDonaldList() {
     let id = 11
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.newDonalds)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.newDonald)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
-  func testScottishSimmsList() {
+  func testScottishSimmList() {
     let id = 55
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.simms)
-    XCTAssertEqual(hillList?.region, HillList.Region.scotland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.simm)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.scotland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.scotland)
   }
 
   //
-  // Isle of Man
+  // Lists with the Isle of Man flag
   //
 
-  func testIsleOfManHumpsList() {
+  func testIsleOfManHumpList() {
     let id = 13
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.humps)
-    XCTAssertEqual(hillList?.region, HillList.Region.isleOfMan)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hump)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.isleOfMan])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.isleOfMan)
   }
 
-  func testIsleOfManMarilynsList() {
+  func testIsleOfManMarilynList() {
     let id = 14
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.marilyns)
-    XCTAssertEqual(hillList?.region, HillList.Region.isleOfMan)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.marilyn)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.isleOfMan])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.isleOfMan)
   }
 
-  func testIsleOfManSimmsList() {
+  func testIsleOfManSimmList() {
     let id = 56
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.simms)
-    XCTAssertEqual(hillList?.region, HillList.Region.isleOfMan)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.simm)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.isleOfMan])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.isleOfMan)
   }
 
   //
-  // Wales
+  // Lists with the Wales flag
   //
 
-  func testWelshFurthsList() {
+  func testWelshFurthList() {
     let id = 15
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.furths)
-    XCTAssertEqual(hillList?.region, HillList.Region.wales)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.furth)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.wales)
   }
 
-  func testWelshHumpsList() {
+  func testWelshHumpList() {
     let id = 18
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.humps)
-    XCTAssertEqual(hillList?.region, HillList.Region.wales)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hump)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.wales)
   }
 
-  func testWelshMarilynsList() {
+  func testWelshMarilynList() {
     let id = 19
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.marilyns)
-    XCTAssertEqual(hillList?.region, HillList.Region.wales)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.marilyn)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.wales)
   }
 
-  func testWelshSimmsList() {
+  func testWelshSimmList() {
     let id = 57
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.simms)
-    XCTAssertEqual(hillList?.region, HillList.Region.wales)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.simm)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.wales)
   }
 
   //
-  // England
+  // Lists with the England flag
   //
 
-  func testBirkettsList() {
+  func testBirkettList() {
     let id = 21
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.birketts)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.birkett)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testFellrangersList() {
+  func testFellrangerList() {
     let id = 58
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.fellrangers)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.fellranger)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testEnglishFurthsList() {
+  func testEnglishFurthList() {
     let id = 48
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.furths)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.furth)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testEnglishHumpsList() {
+  func testEnglishHumpList() {
     let id = 23
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.humps)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hump)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testLondonBoroughsList() {
+  func testLondonBoroughList() {
     let id = 62
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.londonBoroughs)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.londonBorough)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testEnglishMarilynsList() {
+  func testEnglishMarilynList() {
     let id = 25
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.marilyns)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.marilyn)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testOutlyingFellsList() {
+  func testOutlyingFellList() {
     let id = 27
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.outlyingFells)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.outlyingFell)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testEnglishSimmsList() {
+  func testEnglishSimmList() {
     let id = 59
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.simms)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.simm)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testSyngesList() {
+  func testSyngeList() {
     let id = 60
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.synges)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.synge)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
-  func testWainwrightsList() {
+  func testWainwrightList() {
     let id = 28
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.wainwrights)
-    XCTAssertEqual(hillList?.region, HillList.Region.england)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.wainwright)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.england)
   }
 
   //
-  // United Kingdom
+  // Lists with the United Kingdom flag
   //
 
-  func testBridgesList() {
+  func testBridgeList() {
     let id = 64
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.bridges)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.bridge)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .isleOfMan, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
-  func testBuxtonAndLewisList() {
+  func testBuxtonAndLewiList() {
     let id = 65
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.buxtonAndLewis)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.buxtonAndLewis)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .isleOfMan, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
   func testList() {
     let id = 68
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.countyTopsAdministrative)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.countyTopAdministrative)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .isleOfMan, .scotland, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
   func testUnitedKingdomCountyTopsCurrentList() {
     let id = 29
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.countyTopsCurrent)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.countyTopCurrent)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .ireland, .isleOfMan, .scotland, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
   func testUnitedKingdomCountyTopsHistoricalList() {
     let id = 66
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.countyTopsHistorical)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.countyTopHistorical)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .ireland, .isleOfMan, .scotland, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
-  func testUnitedKingdomDeweysList() {
+  func testUnitedKingdomDeweyList() {
     let id = 30
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.deweys)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.dewey)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .isleOfMan, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
-  func testUnitedKingdomHewittsList() {
+  func testUnitedKingdomHewittList() {
     let id = 31
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.hewitts)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hewitt)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .ireland, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
-  func testNuttalsList() {
+  func testNuttalList() {
     let id = 34
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.nuttalls)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.nuttall)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
-  func testTrail100sList() {
+  func testTrail100List() {
     let id = 35
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.trail100s)
-    XCTAssertEqual(hillList?.region, HillList.Region.unitedKingdom)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.trail100)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.england, .ireland, .scotland, .wales])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.unitedKingdom)
   }
 
   //
-  // Northern Ireland
+  // Lists with the Northern Ireland flag
   //
 
-  func testArderinsList() {
+  func testArderinList() {
     let id = 39
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.arderins)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.arderin)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testBinnionsList() {
+  func testBinnionList() {
     let id = 40
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.binnions)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.binnion)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testCarnsList() {
+  func testCarnList() {
     let id = 37
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.carns)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.carn)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
   func testNorthernIrelandCountyTopsCurrentList() {
     let id = 46
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.countyTopsCurrent)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.countyTopCurrent)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
   func testNorthernIrelandCountyTopsHistoricalList() {
     let id = 67
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.countyTopsHistorical)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.countyTopHistorical)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testDillonsList() {
+  func testDillonList() {
     let id = 63
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.dillons)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.dillon)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testNorthernIrelandHewittsList() {
+  func testNorthernIrelandHewittList() {
     let id = 50
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.hewitts)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hewitt)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testNorthernIrelandHumpsList() {
+  func testNorthernIrelandHumpList() {
     let id = 52
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.humps)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.hump)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testNorthernIrelandMarilynsList() {
+  func testNorthernIrelandMarilynList() {
     let id = 53
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.marilyns)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.marilyn)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testMyrddynDeweysList() {
+  func testMyrddynDeweyList() {
     let id = 54
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.myrddynDeweys)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.myrddynDewey)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testNorthernIrelandSimmsList() {
+  func testNorthernIrelandSimmList() {
     let id = 61
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.simms)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.simm)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
-  func testVandeleurLynamsList() {
+  func testVandeleurLynamList() {
     let id = 41
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.vandeleurLynams)
-    XCTAssertEqual(hillList?.region, HillList.Region.northernIreland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.vandeleurLynam)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.northernIreland)
   }
 
   //
-  // Ireland
+  // Lists with the Ireland flag
   //
 
   func test900sList() {
     let id = 38
-    let hillList = HillList(id: id)
+    let hillList = HillList.getHillList(id: id)
 
     XCTAssertEqual(hillList?.id, id)
-    XCTAssertEqual(hillList?.category, HillList.Category.nineHundreds)
-    XCTAssertEqual(hillList?.region, HillList.Region.ireland)
+    XCTAssertEqual(hillList?.classification, HillList.Classification.nineHundred)
+    XCTAssertEqual(hillList?.regions, [HillList.Region.ireland])
+    XCTAssertEqual(hillList?.flag, HillList.Flag.ireland)
   }
 }

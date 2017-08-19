@@ -134,11 +134,36 @@ class BackupImporterTests: XCTestCase {
       let trackedHillLists = backup.trackedHillLists
 
       XCTAssertEqual(5, trackedHillLists.count)
-      XCTAssertEqual(HillList.munros, trackedHillLists[0])
-      XCTAssertEqual(HillList.wainwrights, trackedHillLists[1])
-      XCTAssertEqual(HillList.trail100s, trackedHillLists[2])
-      XCTAssertEqual(HillList.welshFurths, trackedHillLists[3])
-      XCTAssertEqual(HillList.nineHundreds, trackedHillLists[4])
+
+      // Munro list, Scotland flag
+      //
+      XCTAssertEqual(HillList.Classification.munro, trackedHillLists[0].classification)
+      XCTAssertEqual([HillList.Region.scotland], trackedHillLists[0].regions)
+      XCTAssertEqual(HillList.Flag.scotland, trackedHillLists[0].flag)
+
+      // Wainwright list, England flag
+      //
+      XCTAssertEqual(HillList.Classification.wainwright, trackedHillLists[1].classification)
+      XCTAssertEqual([HillList.Region.england], trackedHillLists[1].regions)
+      XCTAssertEqual(HillList.Flag.england, trackedHillLists[1].flag)
+
+      // Trail 100 list, UK flag
+      //
+      XCTAssertEqual(HillList.Classification.trail100, trackedHillLists[2].classification)
+      XCTAssertEqual([HillList.Region.england, .ireland, .scotland, .wales], trackedHillLists[2].regions)
+      XCTAssertEqual(HillList.Flag.unitedKingdom, trackedHillLists[2].flag)
+
+      // Furth list, Wales flag
+      //
+      XCTAssertEqual(HillList.Classification.furth, trackedHillLists[3].classification)
+      XCTAssertEqual([HillList.Region.wales], trackedHillLists[3].regions)
+      XCTAssertEqual(HillList.Flag.wales, trackedHillLists[3].flag)
+
+      // 900 list, Ireland flag
+      //
+      XCTAssertEqual(HillList.Classification.nineHundred, trackedHillLists[4].classification)
+      XCTAssertEqual([HillList.Region.ireland], trackedHillLists[4].regions)
+      XCTAssertEqual(HillList.Flag.ireland, trackedHillLists[4].flag)
 
       // Recorded ascents
       //
@@ -219,11 +244,36 @@ class BackupImporterTests: XCTestCase {
       let trackedHillLists = backup.trackedHillLists
 
       XCTAssertEqual(5, trackedHillLists.count)
-      XCTAssertEqual(HillList.nineHundreds, trackedHillLists[0])
-      XCTAssertEqual(HillList.welshFurths, trackedHillLists[1])
-      XCTAssertEqual(HillList.munros, trackedHillLists[2])
-      XCTAssertEqual(HillList.trail100s, trackedHillLists[3])
-      XCTAssertEqual(HillList.wainwrights, trackedHillLists[4])
+
+      // 900 list, Ireland flag
+      //
+      XCTAssertEqual(HillList.Classification.nineHundred, trackedHillLists[0].classification)
+      XCTAssertEqual([HillList.Region.ireland], trackedHillLists[0].regions)
+      XCTAssertEqual(HillList.Flag.ireland, trackedHillLists[0].flag)
+
+      // Furth list, Wales flag
+      //
+      XCTAssertEqual(HillList.Classification.furth, trackedHillLists[1].classification)
+      XCTAssertEqual([HillList.Region.wales], trackedHillLists[1].regions)
+      XCTAssertEqual(HillList.Flag.wales, trackedHillLists[1].flag)
+
+      // Munro list, Scotland flag
+      //
+      XCTAssertEqual(HillList.Classification.munro, trackedHillLists[2].classification)
+      XCTAssertEqual([HillList.Region.scotland], trackedHillLists[2].regions)
+      XCTAssertEqual(HillList.Flag.scotland, trackedHillLists[2].flag)
+
+      // Trail 100 list, UK flag
+      //
+      XCTAssertEqual(HillList.Classification.trail100, trackedHillLists[3].classification)
+      XCTAssertEqual([HillList.Region.england, .ireland, .scotland, .wales], trackedHillLists[3].regions)
+      XCTAssertEqual(HillList.Flag.unitedKingdom, trackedHillLists[3].flag)
+
+      // Wainwright list, England flag
+      //
+      XCTAssertEqual(HillList.Classification.wainwright, trackedHillLists[4].classification)
+      XCTAssertEqual([HillList.Region.england], trackedHillLists[4].regions)
+      XCTAssertEqual(HillList.Flag.england, trackedHillLists[4].flag)
 
       // Recorded ascents
       //
@@ -305,14 +355,54 @@ class BackupImporterTests: XCTestCase {
       let trackedHillLists = backup.trackedHillLists
 
       XCTAssertEqual(8, trackedHillLists.count)
-      XCTAssertEqual(HillList.nineHundreds, trackedHillLists[0])
-      XCTAssertEqual(HillList.corbetts, trackedHillLists[1])
-      XCTAssertEqual(HillList.welshFurths, trackedHillLists[2])
-      XCTAssertEqual(HillList.welshMarilyns, trackedHillLists[3])
-      XCTAssertEqual(HillList.englishMarilyns, trackedHillLists[4])
-      XCTAssertEqual(HillList.munros, trackedHillLists[5])
-      XCTAssertEqual(HillList.trail100s, trackedHillLists[6])
-      XCTAssertEqual(HillList.wainwrights, trackedHillLists[7])
+
+      // 900 list, Ireland flag
+      //
+      XCTAssertEqual(HillList.Classification.nineHundred, trackedHillLists[0].classification)
+      XCTAssertEqual([HillList.Region.ireland], trackedHillLists[0].regions)
+      XCTAssertEqual(HillList.Flag.ireland, trackedHillLists[0].flag)
+
+      // Corbett list, Scotland flag
+      //
+      XCTAssertEqual(HillList.Classification.corbett, trackedHillLists[1].classification)
+      XCTAssertEqual([HillList.Region.scotland], trackedHillLists[1].regions)
+      XCTAssertEqual(HillList.Flag.scotland, trackedHillLists[1].flag)
+
+      // Furth list, Wales flag
+      //
+      XCTAssertEqual(HillList.Classification.furth, trackedHillLists[2].classification)
+      XCTAssertEqual([HillList.Region.wales], trackedHillLists[2].regions)
+      XCTAssertEqual(HillList.Flag.wales, trackedHillLists[2].flag)
+
+      // Marilyn list, Wales flag
+      //
+      XCTAssertEqual(HillList.Classification.marilyn, trackedHillLists[3].classification)
+      XCTAssertEqual([HillList.Region.wales], trackedHillLists[3].regions)
+      XCTAssertEqual(HillList.Flag.wales, trackedHillLists[3].flag)
+
+      // Marilyn list, England flag
+      //
+      XCTAssertEqual(HillList.Classification.marilyn, trackedHillLists[4].classification)
+      XCTAssertEqual([HillList.Region.england], trackedHillLists[4].regions)
+      XCTAssertEqual(HillList.Flag.england, trackedHillLists[4].flag)
+
+      // Munro list, Scotland flag
+      //
+      XCTAssertEqual(HillList.Classification.munro, trackedHillLists[5].classification)
+      XCTAssertEqual([HillList.Region.scotland], trackedHillLists[5].regions)
+      XCTAssertEqual(HillList.Flag.scotland, trackedHillLists[5].flag)
+
+      // Trail 100 list, UK flag
+      //
+      XCTAssertEqual(HillList.Classification.trail100, trackedHillLists[6].classification)
+      XCTAssertEqual([HillList.Region.england, .ireland, .scotland, .wales], trackedHillLists[6].regions)
+      XCTAssertEqual(HillList.Flag.unitedKingdom, trackedHillLists[6].flag)
+
+      // Wainwright list, England flag
+      //
+      XCTAssertEqual(HillList.Classification.wainwright, trackedHillLists[7].classification)
+      XCTAssertEqual([HillList.Region.england], trackedHillLists[7].regions)
+      XCTAssertEqual(HillList.Flag.england, trackedHillLists[7].flag)
 
       // Recorded ascents
       //
@@ -324,7 +414,7 @@ class BackupImporterTests: XCTestCase {
       }
 
       XCTAssertEqual(12, actualHillNumbers.count)
-      XCTAssertTrue(Set(expectedHillNumbers).symmetricDifference(Set(actualHillNumbers)).isEmpty)
+      XCTAssertEqual(Set(expectedHillNumbers), Set(actualHillNumbers))
       backup.ascendedHills.forEach { ascendedHill in
         XCTAssertEqual(1, ascendedHill.ascents.count)
       }
@@ -419,14 +509,54 @@ class BackupImporterTests: XCTestCase {
       let trackedHillLists = backup.trackedHillLists
 
       XCTAssertEqual(8, trackedHillLists.count)
-      XCTAssertEqual(HillList.nineHundreds, trackedHillLists[0])
-      XCTAssertEqual(HillList.corbetts, trackedHillLists[1])
-      XCTAssertEqual(HillList.welshFurths, trackedHillLists[2])
-      XCTAssertEqual(HillList.welshMarilyns, trackedHillLists[3])
-      XCTAssertEqual(HillList.englishMarilyns, trackedHillLists[4])
-      XCTAssertEqual(HillList.munros, trackedHillLists[5])
-      XCTAssertEqual(HillList.trail100s, trackedHillLists[6])
-      XCTAssertEqual(HillList.wainwrights, trackedHillLists[7])
+
+      // 900 list, Ireland flag
+      //
+      XCTAssertEqual(HillList.Classification.nineHundred, trackedHillLists[0].classification)
+      XCTAssertEqual([HillList.Region.ireland], trackedHillLists[0].regions)
+      XCTAssertEqual(HillList.Flag.ireland, trackedHillLists[0].flag)
+
+      // Corbett list, Scotland flag
+      //
+      XCTAssertEqual(HillList.Classification.corbett, trackedHillLists[1].classification)
+      XCTAssertEqual([HillList.Region.scotland], trackedHillLists[1].regions)
+      XCTAssertEqual(HillList.Flag.scotland, trackedHillLists[1].flag)
+
+      // Furth list, Wales flag
+      //
+      XCTAssertEqual(HillList.Classification.furth, trackedHillLists[2].classification)
+      XCTAssertEqual([HillList.Region.wales], trackedHillLists[2].regions)
+      XCTAssertEqual(HillList.Flag.wales, trackedHillLists[2].flag)
+
+      // Marilyn list, Wales flag
+      //
+      XCTAssertEqual(HillList.Classification.marilyn, trackedHillLists[3].classification)
+      XCTAssertEqual([HillList.Region.wales], trackedHillLists[3].regions)
+      XCTAssertEqual(HillList.Flag.wales, trackedHillLists[3].flag)
+
+      // Marilyn list, England flag
+      //
+      XCTAssertEqual(HillList.Classification.marilyn, trackedHillLists[4].classification)
+      XCTAssertEqual([HillList.Region.england], trackedHillLists[4].regions)
+      XCTAssertEqual(HillList.Flag.england, trackedHillLists[4].flag)
+
+      // Munro list, Scotland flag
+      //
+      XCTAssertEqual(HillList.Classification.munro, trackedHillLists[5].classification)
+      XCTAssertEqual([HillList.Region.scotland], trackedHillLists[5].regions)
+      XCTAssertEqual(HillList.Flag.scotland, trackedHillLists[5].flag)
+
+      // Trail 100 list, UK flag
+      //
+      XCTAssertEqual(HillList.Classification.trail100, trackedHillLists[6].classification)
+      XCTAssertEqual([HillList.Region.england, .ireland, .scotland, .wales], trackedHillLists[6].regions)
+      XCTAssertEqual(HillList.Flag.unitedKingdom, trackedHillLists[6].flag)
+
+      // Wainwright list, England flag
+      //
+      XCTAssertEqual(HillList.Classification.wainwright, trackedHillLists[7].classification)
+      XCTAssertEqual([HillList.Region.england], trackedHillLists[7].regions)
+      XCTAssertEqual(HillList.Flag.england, trackedHillLists[7].flag)
 
       // Recorded ascents
       //
