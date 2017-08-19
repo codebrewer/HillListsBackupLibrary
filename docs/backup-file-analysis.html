@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Backup File Analysis  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Backup File Analysis  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Backup File Analysis  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Classification.html">– Classification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Flag.html">– Flag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='analysis-of-a-hill-lists-backup-file' class='heading'>Analysis of a Hill Lists Backup File</h1>
+
+<p>This guide provides information on how to read and interpret the content of a
+backup file exported by the Hill Lists app, insofar as how to do that has been
+determined. This analysis informed the design of the API and various datatypes
+provided by the Hill Lists Backup Library. Code snippets use Swift since that&rsquo;s
+the language in which the library is written.</p>
+<h2 id='contents' class='heading'>Contents</h2>
+
+<ul>
+<li><a href="#loading">Loading</a></li>
+<li><a href="#dictionary-keys">Dictionary Keys</a></li>
+<li><a href="#backup-configuration">Backup Configuration</a></li>
+<li><a href="#map-view-configuration">Map View Configuration</a></li>
+</ul>
+<h2 id='loading' class='heading'>Loading</h2>
+
+<p>A backup file appears to be a serialized dictionary since it&rsquo;s possible to
+deserialize it to produce a <code>Dictionary&lt;String, Any&gt;</code>:</p>
+<pre class="highlight swift"><code><span class="c1">// `path` is a `String` naming the path to a backup file</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="kt">NSKeyedUnarchiver</span><span class="o">.</span><span class="nf">unarchiveObject</span><span class="p">(</span><span class="nv">withFile</span><span class="p">:</span> <span class="n">path</span><span class="p">)</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+</code></pre>
+
+<p>More generally, if the backup content is made available at a URL:</p>
+<pre class="highlight swift"><code><span class="c1">// `url` is a `URL` identifying the location of a backup file</span>
+<span class="k">let</span> <span class="nv">urlData</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Data</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="kt">NSKeyedUnarchiver</span><span class="o">.</span><span class="nf">unarchiveObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">urlData</span><span class="p">)</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+</code></pre>
+<h2 id='dictionary-keys' class='heading'>Dictionary Keys</h2>
+
+<p>Several backup-related keys may be present in the dictionary and the name of
+each is used as a case of the <code>BackupKey</code> enum in the library:</p>
+
+<ul>
+<li><a href="#code-ascents-code">ascents</a></li>
+<li><a href="#code-autobackup-code">autobackup</a></li>
+<li><a href="#code-disclaimer-code">disclaimer</a></li>
+<li><a href="#code-distance-code">distance</a></li>
+<li><a href="#code-email-code">email</a></li>
+<li><a href="#code-filename-code">filename</a></li>
+<li><a href="#code-filter-code">filter</a></li>
+<li><a href="#code-google-code">google</a></li>
+<li><a href="#code-hash-code">hash</a></li>
+<li><a href="#code-height-code">height</a></li>
+<li><a href="#code-icloud-code">icloud</a></li>
+<li><a href="#code-latitude-code">latitude</a></li>
+<li><a href="#code-lists-code">lists</a></li>
+<li><a href="#code-longitude-code">longitude</a></li>
+<li><a href="#code-multiple-code">multiple</a></li>
+<li><a href="#code-percent-code">percent</a></li>
+<li><a href="#code-purged-code">purged</a></li>
+<li><a href="#code-restore-code">restore</a></li>
+<li><a href="#code-root-code">root</a></li>
+<li><a href="#code-share-code">share</a></li>
+<li><a href="#code-sms-code">sms</a></li>
+<li><a href="#code-sort-code">sort</a></li>
+<li><a href="#code-terrain-code">terrain</a></li>
+<li><a href="#code-type-code">type</a></li>
+<li><a href="#code-version-code">version</a></li>
+</ul>
+
+<hr>
+<h3 id='code-ascents-code' class='heading'><code>ascents</code></h3>
+
+<p><code>Dictionary&lt;String, [Dictionary&lt;String, Any&gt;]&gt;</code></p>
+
+<p>The value of this key is a dictionary. Each key in the dictionary is a <code>String</code>
+that is the identifier assigned by the
+<a href="http://www.hills-database.co.uk/">Database of British and Irish Hills</a> to an
+individual hill, prefixed with the letter <code>H</code>. The value of each key is an array
+having one element for each recorded ascent of the hill identified by that key.
+A hill must have at least one recorded ascent to be present in the dictionary.
+Each array element is itself a further dictionary that stores zero, one or two
+pieces of information for an ascent. Possible keys are:</p>
+
+<ul>
+<li>a key named <code>date</code> that has as its value a <code>Date</code> recording the date on which
+the ascent was made; if not present then the date of ascent is not recorded;</li>
+<li>a key named <code>notes</code> that has as its value a <code>String</code> recording any notes made
+for the ascent; if not present then no notes were recorded.</li>
+</ul>
+
+<hr>
+<h3 id='code-autobackup-code' class='heading'><code>autobackup</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Part of the <a href="#backup-configuration">backup configuration</a>, in combination
+with <a href="#code-icloud-code">icloud</a>. This particular key&rsquo;s value indicates whether
+or not automatic backup is selected. Automatic backup is supported only to
+iCloud.</p>
+
+<hr>
+<h3 id='code-disclaimer-code' class='heading'><code>disclaimer</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Indicates whether or not the user has accepted the disclaimer shown
+when opting to allow the app to use the location reported by their iOS device or
+selected manually (the location is to be used for non-navigational purposes).</p>
+
+<hr>
+<h3 id='code-distance-code' class='heading'><code>distance</code></h3>
+
+<p><code>String</code> : <code>km</code> | <code>mi</code></p>
+
+<p>The selected unit of measurement for presenting distances, either kilometres or miles.</p>
+
+<hr>
+<h3 id='code-email-code' class='heading'><code>email</code></h3>
+
+<p><code>String</code></p>
+
+<p>The email address used by the app&rsquo;s CSV export feature.</p>
+
+<hr>
+
+<p><code>String</code></p>
+<h3 id='code-filename-code' class='heading'><code>filename</code></h3>
+
+<p>The name of the file in which the backup was originally stored on creation.</p>
+
+<hr>
+<h3 id='code-filter-code' class='heading'><code>filter</code></h3>
+
+<p><code>Int</code></p>
+
+<p>The purpose of this key is unknown. Values of <code>0</code> and <code>1</code> have been seen but it
+can presumably take other values otherwise a <code>Bool</code> would probably have been
+used.</p>
+
+<hr>
+<h3 id='code-google-code' class='heading'><code>google</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Part of the <a href="#map-view-configuration">map view configuration</a>, in combination
+with <a href="#code-terrain-code">terrain</a> and <a href="#code-type-code">type</a>. This particular
+key&rsquo;s value indicates whether Apple or Google maps has been chosen for map-based
+views.</p>
+
+<hr>
+<h3 id='code-hash-code' class='heading'><code>hash</code></h3>
+
+<p><code>Int</code></p>
+
+<p>Presumably a hash unique to an individual backup and perhaps used to verify its
+integrity when being restored.</p>
+
+<hr>
+<h3 id='code-height-code' class='heading'><code>height</code></h3>
+
+<p><code>String</code> : <code>ft</code> | <code>m</code></p>
+
+<p>The selected unit of measurement for presenting heights, either feet or metres.</p>
+
+<hr>
+<h3 id='code-icloud-code' class='heading'><code>icloud</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Part of the <a href="#backup-configuration">backup configuration</a>, in combination
+with <a href="#code-autobackup-code">autobackup</a>. This particular key&rsquo;s value indicates
+whether iCloud or Dropbox has been selected for off-device backup storage.</p>
+
+<hr>
+<h3 id='code-latitude-code' class='heading'><code>latitude</code></h3>
+
+<p><code>Double</code></p>
+
+<p>The latitude component of the location recorded by the app&rsquo;s location feature. A
+default location in Fort William appears to be used.</p>
+
+<hr>
+<h3 id='code-lists-code' class='heading'><code>lists</code></h3>
+
+<p><code>[Int]</code></p>
+
+<p>An array of tracked hill list identifiers as assigned by the app. There will
+always be at least one element since the app requires at least one list to be
+tracked.</p>
+
+<p>The elements are sorted according to the selected sort order - see
+<a href="#code-percent-code">percent</a>.</p>
+
+<hr>
+<h3 id='code-longitude-code' class='heading'><code>longitude</code></h3>
+
+<p><code>Double</code></p>
+
+<p>The longitude component of the location recorded by the app&rsquo;s location feature.
+A default location in Fort William appears to be used.</p>
+
+<hr>
+<h3 id='code-multiple-code' class='heading'><code>multiple</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Indicates whether not the user has opted to track multiple rounds of ascents.</p>
+
+<hr>
+<h3 id='code-percent-code' class='heading'><code>percent</code></h3>
+
+<p><code>Bool?</code></p>
+
+<p>Indicates the ordering of tracked <a href="#code-lists-code">lists</a> on the app&rsquo;s initial
+view:</p>
+
+<ul>
+<li>if not present then lists are ordered manually by the user;</li>
+<li>if present and <code>false</code> then lists are sorted by name, in ascending
+alphabetical order;</li>
+<li>if present and <code>true</code> then lists are sorted by percentage of hills complete,
+in descending order.</li>
+</ul>
+
+<hr>
+<h3 id='code-purged-code' class='heading'><code>purged</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>The purpose of this key is unknown and its value has only ever been observed to
+be <code>true</code>.</p>
+
+<hr>
+<h3 id='code-restore-code' class='heading'><code>restore</code></h3>
+
+<p><code>[Int]</code></p>
+
+<p>The purpose of this key is unknown and its value has only ever been observed to
+contain three elements, all <code>-1</code>.</p>
+
+<hr>
+<h3 id='code-root-code' class='heading'><code>root</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Believed to be unused from Hill Lists version 5.2 onwards but previously used to
+indicate whether backups to Dropbox were saved to the root or an app-specific
+Dropbox folder. API changes introduced by Dropbox during 2017 require the use of
+app-specific folders.</p>
+
+<hr>
+<h3 id='code-share-code' class='heading'><code>share</code></h3>
+
+<p><code>String</code></p>
+
+<p>The email address used by the app&rsquo;s location sharing feature.</p>
+
+<hr>
+<h3 id='code-sms-code' class='heading'><code>sms</code></h3>
+
+<p><code>String</code></p>
+
+<p>The phone number used by the app&rsquo;s location sharing feature.</p>
+
+<hr>
+<h3 id='code-sort-code' class='heading'><code>sort</code></h3>
+
+<p><code>Int</code> : <code>0</code> | <code>1</code> | <code>2</code> | <code>3</code> | <code>4</code> | <code>5</code></p>
+
+<p>Indicates how hills are sorted within the view of an individual list&rsquo;s content:</p>
+
+<ul>
+<li><code>0</code> - hills are sorted by section, in ascending order by number;</li>
+<li><code>1</code> - hills are sorted by name, in ascending alphabetical order;</li>
+<li><code>2</code> - hills are sorted by height, in descending order;</li>
+<li><code>3</code> - hills are sorted by distance from the user&rsquo;s recorded location, closest
+to furthest;</li>
+<li><code>4</code> - hills are sorted by date of ascent, in decreasing chronological order by
+oldest ascent, with unknown ascent daes sorting last;</li>
+<li><code>5</code> - hills are sorted by number of ascents, in increasing order.</li>
+</ul>
+
+<hr>
+<h3 id='code-terrain-code' class='heading'><code>terrain</code></h3>
+
+<p><code>Bool</code></p>
+
+<p>Part of the <a href="#map-view-configuration">map view configuration</a>, in combination
+with <a href="#code-google-code">google</a> and <a href="#code-type-code">type</a>.</p>
+
+<hr>
+<h3 id='code-type-code' class='heading'><code>type</code></h3>
+
+<p><code>Int</code> : <code>0</code> | <code>1</code> | <code>2</code></p>
+
+<p>Part of the <a href="#map-view-configuration">map view configuration</a>, in combination
+with <a href="#code-google-code">google</a> and <a href="#code-terrain-code">terrain</a>.</p>
+
+<hr>
+<h3 id='code-version-code' class='heading'><code>version</code></h3>
+
+<p><code>Int</code></p>
+
+<p>Presumably the version format of the backup file; its value has only ever been
+observed to be <code>430</code>.</p>
+<h2 id='backup-configuration' class='heading'>Backup Configuration</h2>
+
+<p>The backup method and destination for backup files are indicated by the values
+of two keys:</p>
+
+<ul>
+<li><a href="#code-autobackup-code">autobackup</a></li>
+<li><a href="#code-icloud-code">icloud</a></li>
+</ul>
+
+<p><em>plus</em>, it seems, the location of the backup file when a restore operation is
+performed.</p>
+
+<table><thead>
+<tr>
+<th>autobackup</th>
+<th>icloud</th>
+<th>Location at restore time</th>
+<th>Backup option selected</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><em>Can only be iCloud</em></td>
+<td>Automatic (iCloud)</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><em>Can only be iCloud</em></td>
+<td>Manual (iCloud)</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>On the iOS device</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>In Dropbox</td>
+<td>Manual (Dropbox)</td>
+</tr>
+</tbody></table>
+
+<p>Since this library can only read a backup file that has been exported from an
+iOS device it has no way to differentiate between the <em>Manual</em> and <em>Manual
+(Dropbox)</em> options and will report a special case of <em>Manual (indeterminate)</em>
+(represented by the <code>BackupConfiguration.manualIndeterminate</code> static constant).
+This special case is defined by the library and doesn&rsquo;t exist in the app itself.</p>
+<h2 id='map-view-configuration' class='heading'>Map View Configuration</h2>
+
+<p>The map vendor and style used in the map-based views are indicated by the values
+of three keys:</p>
+
+<ul>
+<li><a href="#code-google-code">google</a></li>
+<li><a href="#code-terrain-code">terrain</a></li>
+<li><a href="#code-type-code">type</a></li>
+</ul>
+
+<p>Six different configurations are supported:</p>
+
+<table><thead>
+<tr>
+<th>google</th>
+<th>terrain</th>
+<th>type</th>
+<th>Map vendor and type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>0</td>
+<td>Apple Standard</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>1</td>
+<td>Apple Satellite</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>2</td>
+<td>Apple Hybrid</td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td>0</td>
+<td>Google Standard</td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td>2</td>
+<td>Google Hybrid</td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td>0</td>
+<td>Google Terrain</td>
+</tr>
+</tbody></table>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

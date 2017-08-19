@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HillListsBackupLibrary  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="HillListsBackupLibrary  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="img/carat.png" />
+        HillListsBackupLibrary  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Classification.html">– Classification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Flag.html">– Flag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='hill-lists-backup-library' class='heading'>Hill Lists Backup Library</h1>
+<h2 id='about' class='heading'>About</h2>
+
+<p><strong>Hill Lists Backup Library</strong> is a Swift library that provides read-only access
+to backup files exported by the <a href="https://grahamhaley.co.uk/hills/">Hill Lists</a>
+iOS app available for iPhone and iPad from the
+<a href="https://itunes.apple.com/gb/app/hill-lists/id315200683">App Store</a>.</p>
+
+<p><strong>Hill Lists</strong> is an iOS app for hill walkers in Britain and Ireland, highly
+recommended as a source of hill-related information and for recording, tracking
+and visualising hill-bagging progress.</p>
+
+<p>App users interested in examining their data are likely to be better served by
+the app&rsquo;s CSV export feature than by this library. While a backup file contains
+the app&rsquo;s configuration settings, the identifiers of tracked lists, the
+identifiers of ascended hills and the dates and recorded notes of any ascents,
+the CSV export provides immediately usable hill-related information such as
+name, location and height.</p>
+<h2 id='motivation' class='heading'>Motivation</h2>
+
+<p>The library is motivated by a desire to learn the Swift programming language and
+how to build a reusable Swift library the <q>right</q> way. A concrete project is
+often the best way to learn new skills. If the resulting library is useful to
+anyone then that&rsquo;s a bonus!</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<p>The minimum SDK/platform versions required to build and use the library are:</p>
+
+<ul>
+<li>Swift 3.1</li>
+<li>macOS 10.12</li>
+</ul>
+
+<p>The library should also be usable on iOS (probably version 10 onwards) but this
+has not been tested.</p>
+
+<p>Unfortunately, Linux is not supported because some APIs used by the library
+(<em>e.g.</em> <code>CoreLocation</code>) are not presently available on Linux.</p>
+<h2 id='compatibility' class='heading'>Compatibility</h2>
+
+<p>Backups exported by Hill Lists 5.1 and 5.2 have been successfully imported.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> automates the
+distribution of Swift code. To use this library with the Swift Package Manager,
+add a dependency to your <code>Package.swift</code> file:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+
+        <span class="c1">// ...</span>
+
+        <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+                <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/codebrewer/HillListsBackupLibrary.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p><strong>Note</strong> : this installation mechanism almost certainly won&rsquo;t work until a Git
+tag has been created, something that won&rsquo;t happen until the library reaches a
+usable state.</p>
+<h2 id='building-and-testing' class='heading'>Building and Testing</h2>
+
+<p>The library uses types introduced in macOS 10.12 so it&rsquo;s likely (at the current
+time, with Swift 3.1) that the deployment target must be specified when
+building.</p>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>To build without tests:</p>
+<pre class="highlight shell"><code>swift build -Xswiftc -target -Xswiftc x86_64-apple-macosx10.12
+</code></pre>
+
+<p>To build with, and run, tests:</p>
+<pre class="highlight shell"><code>swift <span class="nb">test</span> -Xswiftc -target -Xswiftc x86_64-apple-macosx10.12
+</code></pre>
+
+<p>To delete build artifacts:</p>
+<pre class="highlight shell"><code>swift package clean
+</code></pre>
+<h3 id='ides' class='heading'>IDEs</h3>
+
+<p>The library can be edited, built and tested in both Xcode and
+<a href="https://www.jetbrains.com/objc/">AppCode</a>.</p>
+
+<p>First, use the Swift Package Manager to generate Xcode project files:</p>
+<pre class="highlight shell"><code>swift package generate-xcodeproj
+</code></pre>
+
+<p>Some project configuration is necessary to be able to build the library and
+build and run the tests:</p>
+
+<ul>
+<li>in the Build Settings for both targets, set the <strong>macOS Deployment Target</strong> to
+<strong>macOS 10.12</strong></li>
+<li>in the Build Phases for the test target, add a <strong>Copy files</strong> phase to copy
+the <code>Data</code> directory from <code>Tests/HillListsBackupLibraryTests</code> to the
+<code>Resources</code> destination.</li>
+</ul>
+
+<p>If using AppCode then you&rsquo;ll want to create a run/debug configuration for the
+unit tests. Lookup of test resources used by <code>BackupImporterTests</code> should work
+whether running tests from a shell or an IDE.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>A Hill Lists backup is represented by the <code>Backup</code> protocol, instances of which
+are created by static functions in the <code>BackupImporter</code> struct.</p>
+
+<p>The unit tests in the <code>BackupImporterTests</code> class show the library in use, but
+in essence:</p>
+
+<p>Open a backup file:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">HillListsBackupLibrary</span>
+
+<span class="k">let</span> <span class="nv">backup</span><span class="p">:</span> <span class="kt">Backup</span>
+
+<span class="n">backup</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">BackupImporter</span><span class="o">.</span><span class="nf">importBackup</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="s">"/path/to/backup/hlyyyyMMdd@HHmmSS.bak"</span><span class="p">)</span>
+</code></pre>
+
+<p>If no error is thrown then you have a <code>Backup</code> implementation and can use the
+properties declared by that protocol to access the imported data.</p>
+
+<p>While all of the app&rsquo;s settings as configured by the user are accessible, it&rsquo;s
+probably the tracked lists and hill ascents that are of most interest:</p>
+<pre class="highlight swift"><code><span class="n">backup</span><span class="o">.</span><span class="n">trackedLists</span><span class="o">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="n">hillList</span> <span class="k">in</span>
+  <span class="c1">// hillList is an instance of `HillList`, a type that describes the</span>
+  <span class="c1">// classification and geographical regions of a list of hills</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Tracking </span><span class="se">\(</span><span class="n">hillList</span><span class="o">.</span><span class="n">classification</span><span class="se">)</span><span class="s"> in </span><span class="se">\(</span><span class="n">hillList</span><span class="o">.</span><span class="n">regions</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">backup</span><span class="o">.</span><span class="n">ascendedHills</span><span class="o">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="n">ascendedHill</span> <span class="k">in</span>
+  <span class="c1">// `ascendedHill` is an instance of `AscendedHill`, a type that contains</span>
+  <span class="c1">// details of all ascents made of an individual hill</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">ascendedHill</span><span class="o">.</span><span class="n">ascents</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s"> ascent(s) for hill number </span><span class="se">\(</span><span class="n">ascendedHill</span><span class="o">.</span><span class="n">hillNumber</span><span class="se">)</span><span class="s">:"</span><span class="p">)</span>
+  <span class="n">ascendedHill</span><span class="o">.</span><span class="n">ascents</span><span class="o">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="n">ascent</span> <span class="k">in</span> <span class="nf">print</span><span class="p">(</span><span class="s">"  </span><span class="se">\(</span><span class="n">ascent</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Note that a backup doesn&rsquo;t store information that relates hills to lists. So
+while, for instance, the tracked lists might contain <code>HillList.munros</code> and
+<code>HillList.scottishHumps</code>, and the ascended hills might contain an ascent of Ben
+Nevis, there&rsquo;s nothing in the backup to record that Ben Nevis is a member of
+both lists. The relationships between hills and lists require the use of the
+<a href="http://www.hills-database.co.uk/">Database of British and Irish Hills</a> (with
+the relevant link information in this example being Ben Nevis&rsquo;s identifier of
+<code>&quot;H278&quot;</code>).</p>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>An analysis of backup files is available <a href="backup-file-analysis.html">here</a>.</p>
+
+<p>API <a href="https://codebrewer.github.io/HillListsBackupLibrary">documentation</a> is
+generated by <a href="https://github.com/realm/jazzy">jazzy</a>.</p>
+
+<p>To generate the documentation:</p>
+<pre class="highlight shell"><code>./generate-docs.sh
+</code></pre>
+
+<p>To view the generated documentation in the default browser:</p>
+<pre class="highlight shell"><code>open index.html
+</code></pre>
+<h2 id='privacy' class='heading'>Privacy</h2>
+
+<p>The Hill Lists Backup Library can import backup files that have been exported
+from the app and placed somewhere accessible. As the app author&rsquo;s
+<a href="https://grahamhaley.co.uk/privacy/">privacy policy</a> makes clear, app users must
+actively choose to export backups from their iOS device and must trust anyone
+who then has access to the files. Once available, backup files can be read in a
+straightforward manner (although it&rsquo;s quite possible that the app could be
+updated to change this).</p>
+<h2 id='acknowledgments' class='heading'>Acknowledgments</h2>
+
+<p>The Hill Lists iOS app is copyright Graham Haley. The Hill Lists Backup Library
+is not affiliated with the iOS app or its developer in any way and is not
+endorsed by him.</p>
+
+<p>Various descriptions of hill list definitions that appear in this library&rsquo;s API
+documentation have been taken from the
+<a href="http://www.hills-database.co.uk/">Database of British and Irish Hills</a>.</p>
+<h2 id='licensing' class='heading'>Licensing</h2>
+
+<p>This software is licensed under the Apache License Version 2.0. Please see
+<a href="LICENSE">LICENSE</a> for details.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

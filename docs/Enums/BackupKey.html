@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BackupKey Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/BackupKey" class="dashAnchor"></a>
+    <a title="BackupKey Enum Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BackupKey Enum Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList/Classification.html">– Classification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList/Flag.html">– Flag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BackupKey</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BackupKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                </div>
+              </div>
+            <p>An enumeration of keys present in a backup.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey7ascentsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/ascents" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey7ascentsFMS0_S0_">ascents</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The hill ascents recorded by the user.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey/AscentsKey.html">BackupKey.AscentsKey</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">ascents</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey10autobackupFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/autobackup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey10autobackupFMS0_S0_">autobackup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not automatic backup is selected:</p>
+
+<ul>
+<li>if <code>false</code> then manual backup is selected;</li>
+<li>if <code>true</code> then automatic backup is selected.</li>
+</ul>
+
+<p>Automatic backup is triggered by various actions in the app (such as
+recording a new ascent) and is supported for iCloud but not Dropbox.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey6icloudFMS0_S0_">BackupKey.icloud</a></code>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey4rootFMS0_S0_">BackupKey.root</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">autobackup</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey10disclaimerFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/disclaimer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey10disclaimerFMS0_S0_">disclaimer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not the user has chosen to use the location reported by their
+iOS device and accepted a disclaimer that this should not be relied on for
+navigation:</p>
+<li>if <code>false</code> then location information is not to be used;</li>
+<li><p>if <code>true</code> then location information is to be used.</p></li>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey8latitudeFMS0_S0_">BackupKey.latitude</a></code></p>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey9longitudeFMS0_S0_">BackupKey.longitude</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">disclaimer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey8distanceFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/distance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey8distanceFMS0_S0_">distance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The selected unit of measurement for presenting distances:</p>
+
+<ul>
+<li>if <code>km</code> then distances are presented in kilometres;</li>
+<li>if <code>mi</code> then distances are presented in miles.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">distance</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey5emailFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/email" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey5emailFMS0_S0_">email</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The email address used by the app&rsquo;s CSV export feature.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">email</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey8filenameFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/filename" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey8filenameFMS0_S0_">filename</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the file in which the backup was originally stored on export.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">filename</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey6filterFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/filter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey6filterFMS0_S0_">filter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A number seen to be <code>0</code> or <code>1</code>, purpose unknown. Presumably takes other
+values or would have a boolean.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">filter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey6googleFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/google" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey6googleFMS0_S0_">google</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Part of the map type selection. Indicates whether or not Google maps of
+some type have been selected in preference to Apple maps.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey7terrainFMS0_S0_">BackupKey.terrain</a></code>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey4typeFMS0_S0_">BackupKey.type</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">google</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey4hashFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/hash" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey4hashFMS0_S0_">hash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A hash value, presumably unique to an individual backup and perhaps used to
+verify its integrity when being restored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">hash</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey6heightFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/height" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey6heightFMS0_S0_">height</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The selected unit of measurement for presenting heights:</p>
+
+<ul>
+<li>if <code>ft</code> then heights are presented in feet;</li>
+<li>if <code>m</code> then heights are presented in metres.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">height</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey6icloudFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/icloud" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey6icloudFMS0_S0_">icloud</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether iCloud or Dropbox has been selected as the destination for
+backups.</p>
+<li>if <code>false</code> then Dropbox is selected (and backups are made manually);</li>
+<li><p>if <code>true</code> then iCloud is selected (and backups may be made either
+automatically or manually).</p></li>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey10autobackupFMS0_S0_">BackupKey.autobackup</a></code></p>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey4rootFMS0_S0_">BackupKey.root</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">icloud</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey8latitudeFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/latitude" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey8latitudeFMS0_S0_">latitude</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The latitude component of the location (if any) recorded by the app&rsquo;s
+location feature.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey10disclaimerFMS0_S0_">BackupKey.disclaimer</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">latitude</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey5listsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/lists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey5listsFMS0_S0_">lists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifiers of lists tracked by the user, sorted according to the
+selected sorting specification.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey7percentFMS0_S0_">BackupKey.percent</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">lists</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey9longitudeFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/longitude" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey9longitudeFMS0_S0_">longitude</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The longitude component of the location (if any) recorded by the app&rsquo;s
+location feature.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey10autobackupFMS0_S0_">BackupKey.autobackup</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">longitude</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey8multipleFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/multiple" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey8multipleFMS0_S0_">multiple</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether or not the app&rsquo;s feature supporting multiple rounds of
+ascents has been enabled:</p>
+
+<ul>
+<li>if <code>false</code> then multiple rounds are not enabled;</li>
+<li>if <code>true</code> then multiple rounds are enabled.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">multiple</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey7percentFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/percent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey7percentFMS0_S0_">percent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates the ordering of tracked lists on the app&rsquo;s initial view:</p>
+<li>if not present then lists are ordered manually by the user;</li>
+<li>if present and <code>false</code> then lists are sorted by name, in ascending
+alphabetical order;</li>
+<li><p>if present and <code>true</code> then lists are sorted by percentage of hills
+complete, in descending order.</p></li>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey5listsFMS0_S0_">BackupKey.lists</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">percent</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey6purgedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/purged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey6purgedFMS0_S0_">purged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A boolean value, purpose unknown.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">purged</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey7restoreFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/restore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey7restoreFMS0_S0_">restore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Purpose unknown, observed to be an array of three numbers (all -1).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">restore</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey4rootFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/root" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey4rootFMS0_S0_">root</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presumably indicated whether backups stored in Dropbox were saved to the
+root folder or to an app-specific folder. Dropbox API changes made in 2017
+have probably rendered this option redundant and support for saving in the
+root folder was removed in Hill Lists version 5.2.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey10autobackupFMS0_S0_">BackupKey.autobackup</a></code>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey6icloudFMS0_S0_">BackupKey.icloud</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">root</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey5shareFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/share" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey5shareFMS0_S0_">share</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The email address used by the app&rsquo;s location sharing feature.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">share</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey3smsFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/sms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey3smsFMS0_S0_">sms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The phone number used by the app&rsquo;s location sharing feature.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sms</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey4sortFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/sort" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey4sortFMS0_S0_">sort</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates how hills are sorted within the view of an individual list&rsquo;s
+content:</p>
+
+<ul>
+<li><code>0</code> - hills are sorted by section, in ascending order by number;</li>
+<li><code>1</code> - hills are sorted by name, in ascending alphabetical order;</li>
+<li><code>2</code> - hills are sorted by height, in descending order;</li>
+<li><code>3</code> - hills are sorted by distance from the user&rsquo;s recorded location, in
+increasing order;</li>
+<li><code>4</code> - hills are sorted by date of ascent, in decreasing chronological
+order by oldest ascent, with unknown ascent daes sorting last;</li>
+<li><code>5</code> - hills are sorted by number of ascents, in increasing order.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sort</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey7terrainFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/terrain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey7terrainFMS0_S0_">terrain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Part of the map type selection. Indicates whether or not (if Google maps
+are selected) the terrain map type is selected.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey6googleFMS0_S0_">BackupKey.google</a></code>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey4typeFMS0_S0_">BackupKey.type</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">terrain</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey4typeFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey4typeFMS0_S0_">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Part of the map type selection.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey6googleFMS0_S0_">BackupKey.google</a></code>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey7terrainFMS0_S0_">BackupKey.terrain</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">type</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO22HillListsBackupLibrary9BackupKey7versionFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO22HillListsBackupLibrary9BackupKey7versionFMS0_S0_">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presumably the version format of the backup.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">version</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OO22HillListsBackupLibrary9BackupKey10AscentsKey"></a>
+                    <a name="//apple_ref/swift/Enum/AscentsKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OO22HillListsBackupLibrary9BackupKey10AscentsKey">AscentsKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of keys present in the value of the <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey7ascentsFMS0_S0_">ascents</a></code> key in a
+backup.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Enums/BackupKey.html#/s:FO22HillListsBackupLibrary9BackupKey7ascentsFMS0_S0_">BackupKey.ascents</a></code>
+
+</div>
+
+                        <a href="../Enums/BackupKey/AscentsKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AscentsKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
