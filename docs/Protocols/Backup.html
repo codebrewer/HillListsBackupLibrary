@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Backup Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Backup" class="dashAnchor"></a>
+    <a title="Backup Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/codebrewer/HillListsBackupLibrary"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HillListsBackupLibrary Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Backup Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../backup-file-analysis.html">Backup File Analysis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BackupError.html">BackupError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey.html">BackupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BackupKey/AscentsKey.html">– AscentsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeightUnitLength.html">HeightUnitLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HillListsSortingConfiguration.html">HillListsSortingConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Backup.html">Backup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AscendedHill.html">AscendedHill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Ascent.html">Ascent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration.html">BackupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupConfiguration/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BackupImporter.html">BackupImporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList/Classification.html">– Classification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HillList/Flag.html">– Flag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationConfiguration.html">LocationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Vendor.html">– Vendor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MapViewConfiguration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortingConfigurations.html">SortingConfigurations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Backup</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Backup</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type that represents a backup created by the Hill Lists app and provides
+read-only access to its data.</p>
+
+<p>Properties are generally of two types:</p>
+
+<ul>
+<li>those that represent configuration options selected by the user on the
+app&rsquo;s settings view; and</li>
+<li>those that store hill ascent-related data recorded by the user.</li>
+</ul>
+
+<p>Additionally, there&rsquo;s a property that stores metadata about the backup
+itself.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup8metadataVS_8Metadata"></a>
+                    <a name="//apple_ref/swift/Property/metadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup8metadataVS_8Metadata">metadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Various metadata describing properties of the backup itself.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">metadata</span><span class="p">:</span> <span class="kt"><a href="../Structs/Metadata.html">Metadata</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup16trackedHillListsGSaVS_8HillList_"></a>
+                    <a name="//apple_ref/swift/Property/trackedHillLists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup16trackedHillListsGSaVS_8HillList_">trackedHillLists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The hill lists being tracked, ordered according to the selected sorting
+configuration. Entries are not duplicated <em>i.e.</em> the property could be
+represented by a sorted set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">trackedHillLists</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/HillList.html">HillList</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup13ascendedHillsGSaVS_12AscendedHill_"></a>
+                    <a name="//apple_ref/swift/Property/ascendedHills" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup13ascendedHillsGSaVS_12AscendedHill_">ascendedHills</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The hill ascents recorded in this backup. Elements appear to be in order
+by date of ascent, earliest first, with ascents on unknown dates sorting
+first. Entries are not duplicated <em>i.e.</em> the property could be represented
+by a sorted set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">ascendedHills</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/AscendedHill.html">AscendedHill</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup19backupConfigurationVS_19BackupConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/backupConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup19backupConfigurationVS_19BackupConfiguration">backupConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The configuration specifying how backups should be created and where they
+should be stored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">backupConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Structs/BackupConfiguration.html">BackupConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup27contactDetailsConfigurationVS_27ContactDetailsConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/contactDetailsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup27contactDetailsConfigurationVS_27ContactDetailsConfiguration">contactDetailsConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The various pieces of contact information entered by the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">contactDetailsConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup18unitsConfigurationVS_18UnitsConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/unitsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup18unitsConfigurationVS_18UnitsConfiguration">unitsConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The units of measurement configured for presentation of distances and
+heights.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">unitsConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Structs/UnitsConfiguration.html">UnitsConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup20mapViewConfigurationVS_20MapViewConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/mapViewConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup20mapViewConfigurationVS_20MapViewConfiguration">mapViewConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The map view configuration selected by the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">mapViewConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Structs/MapViewConfiguration.html">MapViewConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup21sortingConfigurationsVS_21SortingConfigurations"></a>
+                    <a name="//apple_ref/swift/Property/sortingConfigurations" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup21sortingConfigurationsVS_21SortingConfigurations">sortingConfigurations</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How tracked lists should be sorted in the app&rsquo;s initial view and hills
+sorted in the view of an individual tracked list&rsquo;s content.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sortingConfigurations</span><span class="p">:</span> <span class="kt"><a href="../Structs/SortingConfigurations.html">SortingConfigurations</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup21locationConfigurationVS_21LocationConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/locationConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup21locationConfigurationVS_21LocationConfiguration">locationConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last location set by the user or recorded by their iOS device, and how
+that location should be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">locationConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Structs/LocationConfiguration.html">LocationConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP22HillListsBackupLibrary6Backup26miscellaneousConfigurationVS_26MiscellaneousConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/miscellaneousConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP22HillListsBackupLibrary6Backup26miscellaneousConfigurationVS_26MiscellaneousConfiguration">miscellaneousConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Miscellaneous pieces of configuration data that don&rsquo;t fit into or justify
+a more specific category.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">miscellaneousConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Structs/MiscellaneousConfiguration.html">MiscellaneousConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
