@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Metadata Struct Reference</title>
+    <title>HillList Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/Metadata" class="dashAnchor"></a>
-    <a title="Metadata Struct Reference"></a>
+    <a name="//apple_ref/swift/Struct/HillList" class="dashAnchor"></a>
+    <a title="HillList Struct Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HillListsBackupLibrary Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HillListsBackupLibrary Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Metadata Struct Reference
+        HillList Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -134,14 +134,41 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Metadata</h1>
+            <h1>HillList</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Metadata</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HillList</span></code></pre>
 
                 </div>
               </div>
-            <p>A type representing backup metadata.</p>
+            <p>A type that represents a list of hills that can be tracked by the app. In
+keeping with the way the app presents lists, this type has properties to
+store:</p>
+
+<ul>
+<li>the <code><a href="../Structs/HillList/Classification.html">HillList.Classification</a></code> of hills within the list (<em>e.g.</em> Dewey);</li>
+<li>the <code><a href="../Structs/HillList/Region.html">HillList.Region</a></code>s covered by the list (<em>e.g.</em> England, Isle of Man &amp; Wales);</li>
+<li>the <code><a href="../Structs/HillList/Flag.html">HillList.Flag</a></code> displayed alongside the list&rsquo;s name (<em>e.g.</em> United Kingdom).</li>
+</ul>
+
+<p>The hills tracked by each list are <em>generally</em> straightforward to determine
+based on lookup of classification and regions in the
+<a href="http://www.hills-database.co.uk/">database of British and Irish hills</a>
+(DoBIH). However, the app takes an arguably non-obvious approach when it
+comes to Ireland and Northern Ireland. For any <code>HillList</code>:</p>
+
+<ul>
+<li>if <code><a href="../Structs/HillList/Region.html#/s:FOV22HillListsBackupLibrary8HillList6Region7irelandFMS1_S1_">HillList.Region.ireland</a></code> is in its <code>regions</code> set:
+
+<ul>
+<li>if its <code>flag</code> is <code><a href="../Structs/HillList/Flag.html#/s:FOV22HillListsBackupLibrary8HillList4Flag7irelandFMS1_S1_">HillList.Flag.ireland</a></code> then only hills in the Republic of
+Ireland are included;</li>
+<li>if its <code>flag</code> is <code><a href="../Structs/HillList/Flag.html#/s:FOV22HillListsBackupLibrary8HillList4Flag15northernIrelandFMS1_S1_">HillList.Flag.northernIreland</a></code> then hills in both the
+Republic of Ireland and Northern Ireland are included;</li>
+<li>if its <code>flag</code> is <code><a href="../Structs/HillList/Flag.html#/s:FOV22HillListsBackupLibrary8HillList4Flag13unitedKingdomFMS1_S1_">HillList.Flag.unitedKingdom</a></code> then only hills in Northern
+Ireland are included.</li>
+</ul></li>
+</ul>
 
           </section>
           <section class="section task-group-section">
@@ -150,9 +177,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV22HillListsBackupLibrary8Metadata8filenameSS"></a>
-                    <a name="//apple_ref/swift/Property/filename" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV22HillListsBackupLibrary8Metadata8filenameSS">filename</a>
+                    <a name="/s:vV22HillListsBackupLibrary8HillList14classificationOS0_14Classification"></a>
+                    <a name="//apple_ref/swift/Property/classification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary8HillList14classificationOS0_14Classification">classification</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,16 +187,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the file in which the backup was originally stored on export.
-The app uses a naming convention that includes the date and time at which
-the backup was created: <em>hl&lt;date&gt;@&lt;time&gt;.bak</em>.</p>
+                        <p>The classification of hills in this list.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">classification</span><span class="p">:</span> <span class="kt"><a href="../Structs/HillList/Classification.html">Classification</a></span></code></pre>
 
                         </div>
                       </div>
@@ -179,9 +204,9 @@ the backup was created: <em>hl&lt;date&gt;@&lt;time&gt;.bak</em>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV22HillListsBackupLibrary8Metadata4hashSi"></a>
-                    <a name="//apple_ref/swift/Property/hash" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV22HillListsBackupLibrary8Metadata4hashSi">hash</a>
+                    <a name="/s:vV22HillListsBackupLibrary8HillList7regionsGVs3SetOS0_6Region_"></a>
+                    <a name="//apple_ref/swift/Property/regions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary8HillList7regionsGVs3SetOS0_6Region_">regions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,16 +214,14 @@ the backup was created: <em>hl&lt;date&gt;@&lt;time&gt;.bak</em>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The value stored in the backup against the <code>hash</code> key. Observed to be
-unique for every backup and presumably used to verify integrity on
-restore.</p>
+                        <p>The geographical regions covered by this list.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hash</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">regions</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HillList/Region.html">Region</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -208,9 +231,9 @@ restore.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV22HillListsBackupLibrary8Metadata6purgedSb"></a>
-                    <a name="//apple_ref/swift/Property/purged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV22HillListsBackupLibrary8Metadata6purgedSb">purged</a>
+                    <a name="/s:vV22HillListsBackupLibrary8HillList4flagOS0_4Flag"></a>
+                    <a name="//apple_ref/swift/Property/flag" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV22HillListsBackupLibrary8HillList4flagOS0_4Flag">flag</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -218,26 +241,30 @@ restore.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The value stored in the backup against the <code>purged</code> key. Purpose unknown.</p>
+                        <p>The flag used by the app for this list.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">purged</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">flag</span><span class="p">:</span> <span class="kt"><a href="../Structs/HillList/Flag.html">Flag</a></span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV22HillListsBackupLibrary8Metadata7restoreGSaSi_"></a>
-                    <a name="//apple_ref/swift/Property/restore" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV22HillListsBackupLibrary8Metadata7restoreGSaSi_">restore</a>
+                    <a name="/s:OV22HillListsBackupLibrary8HillList14Classification"></a>
+                    <a name="//apple_ref/swift/Enum/Classification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary8HillList14Classification">Classification</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,26 +272,42 @@ restore.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The value stored in the backup against the <code>restore</code> key. Purpose unknown.</p>
+                        <p>An enumeration of hill classifications.</p>
 
+<p>Descriptions of the case values are taken from the
+<a href="http://www.hills-database.co.uk/database_notes.html">database notes</a>
+of the Database of British and Irish Hills (DoBIH).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    the raw value of each case is its unique ID of the classification
+    in the DoBIH, with the exception of <code><a href="../Structs/HillList/Classification.html#/s:FOV22HillListsBackupLibrary8HillList14Classification11nineHundredFMS1_S1_">Classification.nineHundred</a></code>
+    which is not present in that database.
+
+</div>
+
+                        <a href="../Structs/HillList/Classification.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restore</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Classification</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV22HillListsBackupLibrary8Metadata7versionSi"></a>
-                    <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV22HillListsBackupLibrary8Metadata7versionSi">version</a>
+                    <a name="/s:OV22HillListsBackupLibrary8HillList6Region"></a>
+                    <a name="//apple_ref/swift/Enum/Region" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary8HillList6Region">Region</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -272,16 +315,55 @@ restore.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The value stored in the backup against the <code>version</code> key. Presumably
-indicates the data format of the backup, perhaps for a compatibility check
-on restore.</p>
+                        <p>An enumeration of geographical regions within Britain and Ireland to which
+hill lists can belong.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    the raw value of each case is the reference letter used by the
+    Database of British and Irish Hills (DoBIH) for the region.
 
+</div>
+
+                        <a href="../Structs/HillList/Region.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Region</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OV22HillListsBackupLibrary8HillList4Flag"></a>
+                    <a name="//apple_ref/swift/Enum/Flag" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OV22HillListsBackupLibrary8HillList4Flag">Flag</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumeration of flags used alongside list names in the app&rsquo;s view of
+tracked lists.</p>
+
+                        <a href="../Structs/HillList/Flag.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Flag</span></code></pre>
 
                         </div>
                       </div>

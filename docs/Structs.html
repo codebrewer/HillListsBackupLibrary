@@ -51,15 +51,6 @@
                 <a href="Enums/HeightUnitLength.html">HeightUnitLength</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/HillList.html">HillList</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/HillList/Category.html">– Category</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/HillList/Region.html">– Region</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/HillListContentSortingConfiguration.html">HillListContentSortingConfiguration</a>
               </li>
               <li class="nav-group-task">
@@ -98,6 +89,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ContactDetailsConfiguration.html">ContactDetailsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList.html">HillList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Classification.html">– Classification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HillList/Flag.html">– Flag</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/LocationConfiguration.html">LocationConfiguration</a>
@@ -308,6 +311,65 @@ app.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:V22HillListsBackupLibrary8HillList"></a>
+                    <a name="//apple_ref/swift/Struct/HillList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V22HillListsBackupLibrary8HillList">HillList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A type that represents a list of hills that can be tracked by the app. In
+keeping with the way the app presents lists, this type has properties to
+store:</p>
+
+<ul>
+<li>the <code><a href="Structs/HillList/Classification.html">HillList.Classification</a></code> of hills within the list (<em>e.g.</em> Dewey);</li>
+<li>the <code><a href="Structs/HillList/Region.html">HillList.Region</a></code>s covered by the list (<em>e.g.</em> England, Isle of Man &amp; Wales);</li>
+<li>the <code><a href="Structs/HillList/Flag.html">HillList.Flag</a></code> displayed alongside the list&rsquo;s name (<em>e.g.</em> United Kingdom).</li>
+</ul>
+
+<p>The hills tracked by each list are <em>generally</em> straightforward to determine
+based on lookup of classification and regions in the
+<a href="http://www.hills-database.co.uk/">database of British and Irish hills</a>
+(DoBIH). However, the app takes an arguably non-obvious approach when it
+comes to Ireland and Northern Ireland. For any <code>HillList</code>:</p>
+
+<ul>
+<li>if <code><a href="Structs/HillList/Region.html#/s:FOV22HillListsBackupLibrary8HillList6Region7irelandFMS1_S1_">HillList.Region.ireland</a></code> is in its <code>regions</code> set:
+
+<ul>
+<li>if its <code>flag</code> is <code><a href="Structs/HillList/Flag.html#/s:FOV22HillListsBackupLibrary8HillList4Flag7irelandFMS1_S1_">HillList.Flag.ireland</a></code> then only hills in the Republic of
+Ireland are included;</li>
+<li>if its <code>flag</code> is <code><a href="Structs/HillList/Flag.html#/s:FOV22HillListsBackupLibrary8HillList4Flag15northernIrelandFMS1_S1_">HillList.Flag.northernIreland</a></code> then hills in both the
+Republic of Ireland and Northern Ireland are included;</li>
+<li>if its <code>flag</code> is <code><a href="Structs/HillList/Flag.html#/s:FOV22HillListsBackupLibrary8HillList4Flag13unitedKingdomFMS1_S1_">HillList.Flag.unitedKingdom</a></code> then only hills in Northern
+Ireland are included.</li>
+</ul></li>
+</ul>
+
+                        <a href="Structs/HillList.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HillList</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:V22HillListsBackupLibrary21LocationConfiguration"></a>
                     <a name="//apple_ref/swift/Struct/LocationConfiguration" class="dashAnchor"></a>
                     <a class="token" href="#/s:V22HillListsBackupLibrary21LocationConfiguration">LocationConfiguration</a>
@@ -502,7 +564,7 @@ viewing.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-18)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
