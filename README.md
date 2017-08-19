@@ -56,14 +56,10 @@ let package = Package(
         // ...
 
         dependencies: [
-                .Package(url: "https://github.com/codebrewer/HillListsBackupLibrary.git", majorVersion: 0)
+                .Package(url: "https://github.com/codebrewer/HillListsBackupLibrary.git", majorVersion: 1)
         ]
 )
 ```
-
-**Note** : this installation mechanism almost certainly won't work until a Git
-tag has been created, something that won't happen until the library reaches a
-usable state.
 
 ## Building and Testing
 

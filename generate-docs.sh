@@ -11,7 +11,7 @@ jazzy \
   --documentation 'Guides/*.md' \
   --github_url 'https://github.com/codebrewer/HillListsBackupLibrary' \
   --module 'HillListsBackupLibrary' \
-  --module-version 0.0.0 \
+  --module-version 1.0.0 \
   --output docs/ \
   --readme 'README.md' \
   --source-directory . \
