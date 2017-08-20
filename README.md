@@ -146,18 +146,20 @@ backup.ascendedHills.forEach { ascendedHill in
   // `ascendedHill` is an instance of `AscendedHill`, a type that contains
   // details of all ascents made of an individual hill
   print("\(ascendedHill.ascents.count) ascent(s) for hill number \(ascendedHill.hillNumber):")
-  ascendedHill.ascents.forEach { ascent in print("  \(ascent)") }
+  ascendedHill.ascents.forEach { ascent in print(" \(ascent)") }
 }
 ```
 
 Note that a backup doesn't store information that relates hills to lists. So
-while, for instance, the tracked lists might contain `HillList.munros` and
-`HillList.scottishHumps`, and the ascended hills might contain an ascent of Ben
-Nevis, there's nothing in the backup to record that Ben Nevis is a member of
-both lists. The relationships between hills and lists require the use of the
+while, for instance, lists for the `HillList.Classification.munro` and
+`HillList.Classification.hump` classifications might be tracked, and the
+ascended hills might contain an ascent of Ben Nevis, there's nothing in the
+backup to record that Ben Nevis is a member of those lists. The relationships
+between hills and lists require the use of the
 [Database of British and Irish Hills](http://www.hills-database.co.uk/) (with
 the relevant link information in this example being Ben Nevis's identifier of
-`"H278"`).
+`278`, derived from the app's identifier of `"H278"`) or, in the case of the
+Irish 900s, some other suitable datasource.
 
 ## Documentation
 
