@@ -1,0 +1,10 @@
+language: generic
+
+os:
+  - osx
+
+osx_image: xcode8.3
+
+script:
+  - swift build -Xswiftc -target -Xswiftc x86_64-apple-macosx10.12
+  - swift test -Xswiftc -target -Xswiftc x86_64-apple-macosx10.12

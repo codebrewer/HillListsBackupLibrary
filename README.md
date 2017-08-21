@@ -1,5 +1,7 @@
 # Hill Lists Backup Library
 
+[![Build Status](https://api.travis-ci.org/codebrewer/HillListsBackupLibrary.svg?branch=master)](http://travis-ci.org/codebrewer/HillListsBackupLibrary)
+
 ## About
 
 **Hill Lists Backup Library** is a Swift library that provides read-only access
