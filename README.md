@@ -1,5 +1,8 @@
 # Hill Lists Backup Library
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Swift 3.1](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://developer.apple.com/swift/)
+[![Platform macOS](http://img.shields.io/badge/platform-macOS-orange.svg)](https://developer.apple.com/macos/)
 [![Build Status](https://api.travis-ci.org/codebrewer/HillListsBackupLibrary.svg?branch=master)](http://travis-ci.org/codebrewer/HillListsBackupLibrary)
 
 ## About
