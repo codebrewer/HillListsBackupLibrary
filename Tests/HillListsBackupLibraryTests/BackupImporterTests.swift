@@ -54,6 +54,7 @@ class BackupImporterTests: XCTestCase {
                 "..",
                 "..",
                 "..",
+                "..",
                 "Tests",
                 "HillListsBackupLibraryTests",
                 "Data",
