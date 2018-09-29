@@ -15,4 +15,4 @@ jazzy \
   --output docs/ \
   --readme 'README.md' \
   --source-directory . \
-  --swift-version 4.1
+  --swift-version 4.2

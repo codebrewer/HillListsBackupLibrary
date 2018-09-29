@@ -1,7 +1,7 @@
 # Hill Lists Backup Library
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Swift 4.1](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://developer.apple.com/swift/)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://developer.apple.com/swift/)
 [![Platform macOS](http://img.shields.io/badge/platform-macOS-orange.svg)](https://developer.apple.com/macos/)
 [![Build Status](https://api.travis-ci.org/codebrewer/HillListsBackupLibrary.svg?branch=master)](http://travis-ci.org/codebrewer/HillListsBackupLibrary)
 
@@ -34,7 +34,7 @@ anyone then that's a bonus!
 
 The minimum SDK/platform versions required to build and use the library are:
  
-* Swift 4.1
+* Swift 4.2
 * macOS 10.12
 
 The library should also be usable on iOS (probably version 10 onwards) but this
