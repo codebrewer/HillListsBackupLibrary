@@ -288,7 +288,7 @@ Indicates how hills are sorted within the view of an individual list's content:
 * `3` - hills are sorted by distance from the user's recorded location, closest
 to furthest;
 * `4` - hills are sorted by date of ascent, in decreasing chronological order by
-oldest ascent, with unknown ascent daes sorting last;
+oldest ascent, with unknown ascent dates sorting last;
 * `5` - hills are sorted by number of ascents, in increasing order.
 
 ---
