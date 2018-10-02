@@ -113,7 +113,7 @@ fileprivate class BackupImpl: Backup {
     // All values required to create an instance are present
     //
     self.metadata = Metadata(filename: filename, hash: hash, purged: purged, restore: restore, version: version)
-    self.trackedHillLists = listIds.flatMap({ HillList.getHillList(id: $0) })
+    self.trackedHillLists = listIds.compactMap({ HillList.getHillList(id: $0) })
     self.ascendedHills = AscendedHill.readAscendedHills(data: ascents)
     self.backupConfiguration = backupConfiguration
     self.contactDetailsConfiguration =

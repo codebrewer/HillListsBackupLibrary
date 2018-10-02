@@ -42,7 +42,7 @@ extension AscendedHill {
   ///
   /// - Parameter data: the dictionary stored in a backup against the `BackupKey.ascents` key.
   static func readAscendedHills(data: [String: Any]) -> [AscendedHill] {
-    return data.flatMap {
+    return data.compactMap {
       guard let ascentsData = $1 as? [[String: Any]], ascentsData.count > 0 else {
         return nil
       }

@@ -36,7 +36,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enums</a>
+            <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/BackupError.html">BackupError</a>
@@ -67,7 +67,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structs</a>
+            <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/AscendedHill.html">AscendedHill</a>
@@ -137,7 +137,7 @@
             <h1 id='hill-lists-backup-library' class='heading'>Hill Lists Backup Library</h1>
 
 <p><a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
-<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-3.1-orange.svg" alt="Swift 3.1"></a>
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.2-orange.svg" alt="Swift 4.2"></a>
 <a href="https://developer.apple.com/macos/"><img src="http://img.shields.io/badge/platform-macOS-orange.svg" alt="Platform macOS"></a>
 <a href="http://travis-ci.org/codebrewer/HillListsBackupLibrary"><img src="https://api.travis-ci.org/codebrewer/HillListsBackupLibrary.svg?branch=master" alt="Build Status"></a></p>
 <h2 id='about' class='heading'>About</h2>
@@ -168,7 +168,7 @@ anyone then that&rsquo;s a bonus!</p>
 <p>The minimum SDK/platform versions required to build and use the library are:</p>
 
 <ul>
-<li>Swift 3.1</li>
+<li>Swift 4.2</li>
 <li>macOS 10.12</li>
 </ul>
 
@@ -191,7 +191,7 @@ add a dependency to your <code>Package.swift</code> file:</p>
         <span class="c1">// ...</span>
 
         <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-                <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/codebrewer/HillListsBackupLibrary.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/codebrewer/HillListsBackupLibrary.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.2.0"</span><span class="p">)</span>
         <span class="p">]</span>
 <span class="p">)</span>
 </code></pre>
@@ -203,11 +203,11 @@ building.</p>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>To build without tests:</p>
-<pre class="highlight shell"><code>swift build -Xswiftc -target -Xswiftc x86_64-apple-macosx10.12
+<pre class="highlight shell"><code>swift build <span class="nt">-Xswiftc</span> <span class="nt">-target</span> <span class="nt">-Xswiftc</span> x86_64-apple-macosx10.12
 </code></pre>
 
 <p>To build with, and run, tests:</p>
-<pre class="highlight shell"><code>swift <span class="nb">test</span> -Xswiftc -target -Xswiftc x86_64-apple-macosx10.12
+<pre class="highlight shell"><code>swift <span class="nb">test</span> <span class="nt">-Xswiftc</span> <span class="nt">-target</span> <span class="nt">-Xswiftc</span> x86_64-apple-macosx10.12
 </code></pre>
 
 <p>To delete build artifacts:</p>
@@ -238,8 +238,8 @@ unit tests. Lookup of test resources used by <code>BackupImporterTests</code> sh
 whether running tests from a shell or an IDE.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>A Hill Lists backup is represented by the <code>Backup</code> protocol, instances of which
-are created by static functions in the <code>BackupImporter</code> struct.</p>
+<p>A Hill Lists backup is represented by the <code><a href="Protocols/Backup.html">Backup</a></code> protocol, instances of which
+are created by static functions in the <code><a href="Structs/BackupImporter.html">BackupImporter</a></code> struct.</p>
 
 <p>The unit tests in the <code>BackupImporterTests</code> class show the library in use, but
 in essence:</p>
@@ -252,7 +252,7 @@ in essence:</p>
 <span class="n">backup</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">BackupImporter</span><span class="o">.</span><span class="nf">importBackup</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="s">"/path/to/backup/hlyyyyMMdd@HHmmSS.bak"</span><span class="p">)</span>
 </code></pre>
 
-<p>If no error is thrown then you have a <code>Backup</code> implementation and can use the
+<p>If no error is thrown then you have a <code><a href="Protocols/Backup.html">Backup</a></code> implementation and can use the
 properties declared by that protocol to access the imported data.</p>
 
 <p>While all of the app&rsquo;s settings as configured by the user are accessible, it&rsquo;s
@@ -272,8 +272,8 @@ probably the tracked lists and hill ascents that are of most interest:</p>
 </code></pre>
 
 <p>Note that a backup doesn&rsquo;t store information that relates hills to lists. So
-while, for instance, lists for the <code>HillList.Classification.munro</code> and
-<code>HillList.Classification.hump</code> classifications might be tracked, and the
+while, for instance, lists for the <code><a href="Structs/HillList/Classification.html#/s:22HillListsBackupLibrary0A4ListV14ClassificationO5munroyA2EmF">HillList.Classification.munro</a></code> and
+<code><a href="Structs/HillList/Classification.html#/s:22HillListsBackupLibrary0A4ListV14ClassificationO4humpyA2EmF">HillList.Classification.hump</a></code> classifications might be tracked, and the
 ascended hills might contain an ascent of Ben Nevis, there&rsquo;s nothing in the
 backup to record that Ben Nevis is a member of those lists. The relationships
 between hills and lists require the use of the
@@ -293,7 +293,7 @@ generated by <a href="https://github.com/realm/jazzy">jazzy</a>.</p>
 </code></pre>
 
 <p>To view the generated documentation in the default browser:</p>
-<pre class="highlight shell"><code>open index.html
+<pre class="highlight shell"><code>open docs/index.html
 </code></pre>
 <h2 id='privacy' class='heading'>Privacy</h2>
 
@@ -321,8 +321,8 @@ documentation have been taken from the
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2017-08-22)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Mark Scott</a>. All rights reserved. (Last updated: 2018-10-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
